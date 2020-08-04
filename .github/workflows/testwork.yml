@@ -6,8 +6,7 @@ jobs:
  static-query:
    runs-on: ubuntu-16.04
    steps:
-   - uses: actions/checkout@v2
-   - uses: ./
+   - uses: helaili/github-graphql-action@2.0.1
      env:
        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
      with:
