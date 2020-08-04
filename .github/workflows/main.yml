@@ -23,7 +23,7 @@ jobs:
               }
             }
           owner: alphafofana
-          repo: Public-Repository
+          repo: alphafofana.github.io
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - run: "echo 'latest release: ${{ steps.get_latest_release.outputs.data }}'"
