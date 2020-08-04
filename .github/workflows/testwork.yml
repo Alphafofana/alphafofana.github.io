@@ -10,4 +10,4 @@ jobs:
      env:
        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
      with:
-       query: ./staticquery.yaml
+       query: repository-static.query.yaml
