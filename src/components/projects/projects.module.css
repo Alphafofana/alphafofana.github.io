@@ -1,0 +1,17 @@
+.projectsColHeading {
+	text-align: center;
+}
+.projectsColHeading h2 {
+	font-size: 3.5rem;
+	font-family: Montserrat;
+	display: inline-block;
+}
+.projectsColHeading hr {
+	border-top: 5px solid black;
+	width: 95%;
+	margin-top: 0.05em;
+}
+.projectsCardRow {
+	display: flex;
+	flex-wrap: wrap;
+}

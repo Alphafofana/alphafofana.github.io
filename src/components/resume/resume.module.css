@@ -1,0 +1,18 @@
+.resumebody {
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+.resumeRow {
+	padding-top: 1cm;
+	padding-bottom: 1cm;
+}
+.resumeCol {
+	justify-content: center;
+}
+
+.loadingRow {
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}

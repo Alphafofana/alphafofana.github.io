@@ -1,0 +1,129 @@
+/* CSS code from https://uigradients.com
+https://uigradients.com/#Instagram
+*/
+
+/* 
+.landingBody {
+	background: #833ab4; /* fallback for old browsers */ /* 
+	background: -webkit-linear-gradient(
+		to right,
+		#fcb045,
+		#fd1d1d,
+		#833ab4
+	); /* Chrome 10-25, Safari 5.1-6 */ /* 
+	background: linear-gradient(
+		to right,
+		#fcb045,
+		#fd1d1d,
+		#833ab4
+	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ /* 
+}
+*/
+
+/* CSS code from https://www.youtube.com/watch?v=wxwzyWNccYM*/
+.landingBody {
+	width: 100%;
+	min-height: 100vh;
+	margin: 0 auto;
+	background: linear-gradient(
+		136deg,
+		#1f3a93,
+		#4484ce,
+		#1ad7c0,
+		#ff9b11,
+		#9b59b6,
+		#efefef,
+		#000000,
+		#ecf0f1
+	);
+	background-size: 1200% 1200%;
+	-webkit-animation: AnimationName 70s ease infinite;
+	-moz-animation: AnimationName 70s ease infinite;
+	-o-animation: AnimationName 70s ease infinite;
+	animation: AnimationName 70s ease infinite;
+}
+@-webkit-keyframes AnimationName {
+	0% {
+		background-position: 0% 7%;
+	}
+	50% {
+		background-position: 100% 94%;
+	}
+	100% {
+		background-position: 0% 7%;
+	}
+}
+
+@-moz-keyframes AnimationName {
+	0% {
+		background-position: 0% 7%;
+	}
+	50% {
+		background-position: 100% 94%;
+	}
+	100% {
+		background-position: 0% 7%;
+	}
+}
+
+@-o-keyframes AnimationName {
+	0% {
+		background-position: 0% 7%;
+	}
+	50% {
+		background-position: 100% 94%;
+	}
+	100% {
+		background-position: 0% 7%;
+	}
+}
+
+@keyframes AnimationName {
+	0% {
+		background-position: 0% 7%;
+	}
+	50% {
+		background-position: 100% 94%;
+	}
+	100% {
+		background-position: 0% 7%;
+	}
+}
+
+.bannerText h1 {
+	text-align: center;
+	font-family: "Istok Web", sans-serif;
+	font-size: 66px;
+	font-weight: bold;
+	color: white;
+}
+.bannerText hr {
+	border-top: 5px dotted white;
+	width: 35%;
+	margin: 0 auto;
+}
+
+.bannerText p {
+	text-align: center;
+	color: white;
+	font-size: 20px;
+	padding: 1em;
+}
+.socialLinksRow {
+	width: 50%;
+	margin: auto;
+	flex-wrap: wrap;
+}
+.socialLinkCol {
+	justify-content: center;
+	display: flex;
+}
+.socialLinkCol i {
+	color: white;
+	font-size: 5em;
+	padding: 8px;
+}
+.socialLinkCol i:hover {
+	color: black;
+	transition: 0.4s;
+}

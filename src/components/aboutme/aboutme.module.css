@@ -1,0 +1,34 @@
+.aboutbody {
+	min-height: 100vh;
+	background-color: #dcdddd;
+	display: flex;
+}
+.aboutRow {
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+}
+.aboutColImg {
+	justify-content: center;
+	display: flex;
+}
+
+.aboutColImg img {
+	height: 250px;
+}
+.aboutColTxt h2 {
+	font-size: 3.5rem;
+	font-family: Montserrat;
+	display: inline-block;
+}
+.aboutColTxt hr {
+	border-top: 5px solid black;
+	width: 95%;
+	margin-top: 0.05em;
+}
+
+.aboutColTxt p {
+	text-align: left;
+	margin: auto;
+	padding-top: 1em;
+}

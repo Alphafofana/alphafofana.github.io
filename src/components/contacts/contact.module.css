@@ -1,0 +1,23 @@
+.contactBody {
+	min-height: 100vh;
+	background-color: #dcdddd;
+	display: flex;
+}
+.contactRow {
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+}
+.contactColImg {
+	justify-content: center;
+	display: flex;
+}
+
+.contactColImg img {
+	height: 250px;
+}
+
+.contactinfo {
+	font-size: 20px;
+	font-family: Anton;
+}
