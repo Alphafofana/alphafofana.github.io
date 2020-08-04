@@ -1,4 +1,4 @@
-name: test
+name: GitHub GraphQL Action
 on:
  workflow_dispatch:
  
@@ -10,4 +10,4 @@ jobs:
      env:
        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
      with:
-       query: static.query.yaml
+       query: ./static.query.yaml
