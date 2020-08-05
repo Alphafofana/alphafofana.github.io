@@ -1,4 +1,4 @@
-name: OctokitGitHubAPIRequest
+name: OctokitGitHubAPIRequestnew
 on:
  workflow_dispatch:
 
