@@ -1,0 +1,70 @@
+{
+	"data": {
+		"user": {
+			"bio": "",
+			"avatarUrl": "https://avatars3.githubusercontent.com/u/32291426?u=0c13c722ee9f4a1ec4b27912146019af4f96578d&v=4",
+			"repositories": {
+				"nodes": [
+					{
+						"name": "Public-Repository",
+						"url": "https://github.com/Alphafofana/Public-Repository",
+						"stargazers": {
+							"totalCount": 0
+						},
+						"owner": {
+							"login": "Alphafofana"
+						},
+						"forks": {
+							"totalCount": 0
+						},
+						"homepageUrl": null,
+						"description": null,
+						"repositoryTopics": {
+							"nodes": []
+						}
+					},
+					{
+						"name": "Energy-harvesting",
+						"url": "https://github.com/CarlMossberg/Energy-harvesting",
+						"stargazers": {
+							"totalCount": 0
+						},
+						"owner": {
+							"login": "CarlMossberg"
+						},
+						"forks": {
+							"totalCount": 0
+						},
+						"homepageUrl": null,
+						"description": null,
+						"repositoryTopics": {
+							"nodes": []
+						}
+					},
+					{
+						"name": "Thesis-project",
+						"url": "https://github.com/Alphafofana/Thesis-project",
+						"stargazers": {
+							"totalCount": 0
+						},
+						"owner": {
+							"login": "Alphafofana"
+						},
+						"forks": {
+							"totalCount": 0
+						},
+						"homepageUrl": null,
+						"description": "Code for STM32 Development Boards used in Thesis project",
+						"repositoryTopics": {
+							"nodes": []
+						}
+					}
+				],
+				"pageInfo": {
+					"hasNextPage": false,
+					"endCursor": "Y3Vyc29yOnYyOpHOCz_zQA=="
+				}
+			}
+		}
+	}
+}
