@@ -17,7 +17,6 @@ jobs:
       with:
         token: ${{ secrets.PAT_GITHUB }}
         repository: Alphafofana/Alpha_Fofana_CV
-        path: Alpha_Fofana_CV
     - name: Compile LaTeX document
       uses: xu-cheng/latex-action@v2
       with:
