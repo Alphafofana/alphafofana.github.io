@@ -23,9 +23,8 @@ jobs:
     - run: npm install
     - run: node ./src/utils/GitHub_GraphQL_GetProjects ${{ secrets.GITHUB_TOKEN }}
     - name: config user
-      run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
+    -  run: git config --local user.email "action@github.com"
+    -  run: git config --local user.name "GitHub Action"
     - name: add modified files to staging 
     - run: git add -u
     - name: commit changes
