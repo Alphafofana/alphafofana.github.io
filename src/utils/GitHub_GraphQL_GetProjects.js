@@ -7,13 +7,23 @@ var fs = require("fs");
 var path = require("path");
 
 var args = process.argv.slice(2);
-var GITHUB_PAT;
+let GITHUB_PAT;
 
-if (args[0] === undefined) {
-	GITHUB_PAT = process.env.GITHUB_PAT;
-} else {
-	GITHUB_PAT = args[0];
-}
+args[0] === undefined
+	? (GITHUB_PAT = process.env.GITHUB_PAT)
+	: (GITHUB_PAT = args[0]);
+
+const _getCommentObject = () => {
+	let comment;
+	args[0] === undefined
+		? (comment = {
+				_comment: `manual update, ${new Date().toLocaleString()}`,
+		  })
+		: (comment = {
+				_comment: `GH actions update, ${new Date().toLocaleString()}`,
+		  });
+	return comment;
+};
 
 const _githubFetcher = (query) => {
 	const requestBody = { query };
@@ -108,7 +118,10 @@ const _getMergedRepositoryInfo = (resultArray = [], repositoryType) => {
 			`data.user.${repositoryType}.nodes`,
 			[]
 		);
+
+		nodes.push(_getCommentObject());
 		nodes.push(...resultNodes);
+		console.log(nodes);
 	});
 	return nodes;
 };
@@ -137,7 +150,7 @@ const _getAllProjects = (repositoryType) => {
 
 Promise.all([
 	_getAllProjects("repositories").then((data) =>
-		_writeJSON("projects.json", JSON.stringify(data))
+		_writeJSON("projects.json", JSON.stringify(data, null, "\t"))
 	),
 ])
 	.then((filepaths) => console.log("updated files", filepaths))
