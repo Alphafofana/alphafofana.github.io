@@ -23,11 +23,12 @@ jobs:
     - run: npm install
     - run: node ./src/utils/GitHub_GraphQL_GetProjects ${{ secrets.GITHUB_TOKEN }}
     - name: config user
-    -  run: git config --local user.email "action@github.com"
-    -  run: git config --local user.name "GitHub Action"
+      run: | 
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
     - name: add modified files to staging 
-    - run: git add -u
+      run: git add -u
     - name: commit changes
-    - run: git commit -m "Add changes" # add if statment for commitment issues.
+      run: git commit -m "Add changes" # add if statment for commitment issues.
     - name: push changes
-    - run: git push
+      run: git push
