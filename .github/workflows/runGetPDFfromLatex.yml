@@ -9,7 +9,7 @@ on:
 jobs:
   GetPDF:
 
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     steps:
     - name: Checkout Curriculum Vitae repo
