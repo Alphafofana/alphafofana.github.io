@@ -15,11 +15,9 @@ jobs:
     - name: Checkout Curriculum Vitae repo
       uses: actions/checkout@v2
       with:
-        token: ${{ secrets.GitHub_PAT }}
+        token: testing
         repository: Alphafofana/Alpha_Fofana_CV
         path: Alpha_Fofana_CV
-      env:
-          token: ${{ secrets.GitHub_PAT }}
     - name: Compile LaTeX document
       uses: xu-cheng/latex-action@v2
       with:
