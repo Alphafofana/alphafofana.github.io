@@ -7,9 +7,13 @@ var fs = require("fs");
 var path = require("path");
 
 var args = process.argv.slice(2);
+var GITHUB_PAT;
 
-//const GITHUB_API_V4_READ_TOKEN = args[0];
-const GITHUB_PAT = process.env.GITHUB_PAT;
+if (args[0] === undefined) {
+	GITHUB_PAT = process.env.GITHUB_PAT;
+} else {
+	GITHUB_PAT = args[0];
+}
 
 const _githubFetcher = (query) => {
 	const requestBody = { query };
