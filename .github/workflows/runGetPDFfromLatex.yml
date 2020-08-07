@@ -15,7 +15,7 @@ jobs:
     - name: Checkout Curriculum Vitae repo
       uses: actions/checkout@v2
       with:
-        token: ${{ secrets.GitHub_PAT }} # `GitHub_PAT` is a secret that contains your PAT
+        token: ${{ secrets.GitHub_PAT }}
         repository: Alphafofana/Alpha_Fofana_CV
         path: Alpha_Fofana_CV
     - name: Compile LaTeX document
