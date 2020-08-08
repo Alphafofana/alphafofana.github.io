@@ -69,4 +69,4 @@ jobs:
     - name: predeploy build
       run: npm run build
     - name: debloy build to GH pages
-      run: gh-pages -d build
+      run: node  ./node_modules/gh-pages/bin/gh-pages.js -d build
