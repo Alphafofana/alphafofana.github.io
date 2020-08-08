@@ -68,11 +68,12 @@ jobs:
       run: git push
     - name: predeploy build
       run: npm run build
-    - name: debloy build to GH pages
+    - name: set remote
       run: |
           git remote set-url origin https://${github_token}@github.com/alphafofana.github.io
           git remote -v
-          node  ./node_modules/gh-pages/bin/gh-pages.js -d build
+    - name: debloy build to GH pages
+      run: node  ./node_modules/gh-pages/bin/gh-pages.js -d build
       env:
         user_name: 'github-actions[bot]'
         user_email: 'github-actions[bot]@users.noreply.github.com'
