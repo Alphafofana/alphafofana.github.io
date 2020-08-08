@@ -73,7 +73,7 @@ jobs:
           git remote set-url origin https://${github_token}@github.com/alphafofana/alphafofana.github.io
           git remote -v
     - name: debloy build to GH pages
-      run: node  ./node_modules/gh-pages/bin/gh-pages.js -d build -u "GitHub Action <action@github.com"
+      run: node  ./node_modules/gh-pages/bin/gh-pages.js -d build -u "GitHub Action <action@github.com>"
       env:
         user_name: 'github-actions[bot]'
         user_email: 'github-actions[bot]@users.noreply.github.com'
