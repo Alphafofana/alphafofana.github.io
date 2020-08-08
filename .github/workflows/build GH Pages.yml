@@ -44,6 +44,7 @@ jobs:
       with:
         name: CV-artifact
         path: ./public
+        #path: ${GITHUB_WORKSPACE}/public
       
        
       
