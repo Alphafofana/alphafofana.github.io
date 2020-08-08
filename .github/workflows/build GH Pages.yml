@@ -69,7 +69,9 @@ jobs:
     - name: predeploy build
       run: npm run build
     - name: debloy build to GH pages
-      run: node  ./node_modules/gh-pages/bin/gh-pages.js -d build
+      run: |
+          git remote set-url origin https://${github_token}@github.com/${repository} 
+          node  ./node_modules/gh-pages/bin/gh-pages.js -d build
       env:
         user_name: 'github-actions[bot]'
         user_email: 'github-actions[bot]@users.noreply.github.com'
