@@ -25,11 +25,14 @@ jobs:
       uses: xu-cheng/latex-action@v2
       with:
         root_file: main.tex
+    - name: Compile LaTeX document
+      run: mv  main.pdf Alpha_Fofana_CV.pdf
     - name: upload-artifact
       uses: actions/upload-artifact@master
       with:
-        name: my-artifact
-        path: main.pdf
+        name: CV-artifact
+        path: Alpha_Fofana_CV.pdf
+        if-no-files-found: error # 'warn' or 'ignore' are also available, defaults to `warn`
       
   getprojects:
 
@@ -37,6 +40,14 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    
+    - uses: actions/download-artifact@v2
+      with:
+        name: CV-artifact
+        path: /public
+      
+       
+      
     - name: Use Node.js 
       uses: actions/setup-node@v1
       with:
