@@ -1,0 +1,31 @@
+# This is a build workflow to help you get started with Actions
+
+name: build GH Pages
+
+# Controls when the action will run. Triggers the workflow on push or pull request
+# events but only for the gh-pages branch
+on: 
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  buildprosess:
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js 
+      uses: actions/setup-node@v1
+      with:
+        node-version: '8.16.2'
+    - run: npm install
+    - name: git config user
+      run: | 
+        git config --global user.email "action@github.com"
+        git config --global user.name "GitHub Action"
+    - name: predeploy build
+      run: npm run build
+    - name: check remote
+      run: git remote -v
+    - name: debloy build to GH pages
+      run: node  ./node_modules/gh-pages/bin/gh-pages.js -d build -u "GitHub Action <action@github.com>" -r "https://${github_token}@github.com/alphafofana/alphafofana.github.io"
