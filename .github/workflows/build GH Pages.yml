@@ -70,7 +70,7 @@ jobs:
       run: npm run build
     - name: set remote
       run: |
-          git remote set-url origin https://${github_token}@github.com/alphafofana.github.io
+          git remote set-url origin https://${github_token}@github.com/alphafofana/alphafofana.github.io
           git remote -v
     - name: debloy build to GH pages
       run: node  ./node_modules/gh-pages/bin/gh-pages.js -d build
