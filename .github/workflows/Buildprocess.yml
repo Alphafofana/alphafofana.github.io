@@ -23,7 +23,7 @@ jobs:
       run: | 
         git config --global user.email "action@github.com"
         git config --global user.name "GitHub Action"
-        git remote remove origin
+        git -- version
     - name: predeploy build
       run: npm run build
     - name: check remote
