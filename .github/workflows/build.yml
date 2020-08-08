@@ -1,0 +1,68 @@
+
+# This is a build workflow to help you get started with Actions
+
+name: build GH Pages
+
+# Controls when the action will run. Triggers the workflow on push or pull request
+# events but only for the gh-pages branch
+on: 
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  
+  GetPDF:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Curriculum Vitae repo
+      uses: actions/checkout@v2
+      with:
+        token: ${{ secrets.PAT_GITHUB }}
+        repository: Alphafofana/Alpha_Fofana_CV
+    - name: Compile LaTeX document
+      uses: xu-cheng/latex-action@v2
+      with:
+        root_file: main.tex
+    - name: Compile LaTeX document
+      run: mv  main.pdf Alpha_Fofana_CV.pdf
+    - name: upload-artifact
+      uses: actions/upload-artifact@master
+      with:
+        name: CV-artifact
+        path: Alpha_Fofana_CV.pdf
+        #if-no-files-found: error # 'warn' or 'ignore' are also available, defaults to `warn`
+      
+  getprojects:
+    needs: GetPDF
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    
+    - uses: actions/download-artifact@v2
+      with:
+        name: CV-artifact
+        path: ./public
+      
+       
+      
+    - name: Use Node.js 
+      uses: actions/setup-node@v1
+      with:
+        node-version: '8.16.2'
+    - run: npm install
+    - run: node ./src/utils/GitHub_GraphQL_GetProjects ${{ secrets.GITHUB_TOKEN }}
+    - name: git status
+      run: git status
+    - name: git config user
+      run: | 
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+    - name: add modified files to staging 
+      run: git add *
+    - name: commit changes
+      run: git commit -m " build changes by GitHub Action" # add if statment for commitment issues.
+    - name: push changes
+      run: git push
