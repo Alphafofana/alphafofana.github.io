@@ -32,7 +32,7 @@ jobs:
       with:
         name: CV-artifact
         path: Alpha_Fofana_CV.pdf
-        if-no-files-found: error # 'warn' or 'ignore' are also available, defaults to `warn`
+        #if-no-files-found: error # 'warn' or 'ignore' are also available, defaults to `warn`
       
   getprojects:
     needs: GetPDF
@@ -54,13 +54,15 @@ jobs:
         node-version: '8.16.2'
     - run: npm install
     - run: node ./src/utils/GitHub_GraphQL_GetProjects ${{ secrets.GITHUB_TOKEN }}
-    - name: config user
+    - name: git status
+      run: git status
+    - name: git config user
       run: | 
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
     - name: add modified files to staging 
-      run: git add -u
+      run: git add *
     - name: commit changes
-      run: git commit -m "Add changes" # add if statment for commitment issues.
+      run: git commit -m " build changes by GitHub Action" # add if statment for commitment issues.
     - name: push changes
       run: git push
