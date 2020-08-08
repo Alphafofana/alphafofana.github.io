@@ -1,7 +1,7 @@
 
 # This is a basic workflow to help you get started with Actions
 
-name: rungetprojects
+name: build GH Pages
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the gh-pages branch
@@ -10,6 +10,27 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
+  
+  GetPDF:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Curriculum Vitae repo
+      uses: actions/checkout@v2
+      with:
+        token: ${{ secrets.PAT_GITHUB }}
+        repository: Alphafofana/Alpha_Fofana_CV
+    - name: Compile LaTeX document
+      uses: xu-cheng/latex-action@v2
+      with:
+        root_file: main.tex
+    - name: upload-artifact
+      uses: actions/upload-artifact@master
+      with:
+        name: my-artifact
+        path: main.pdf
+      
   getprojects:
 
     runs-on: windows-latest
