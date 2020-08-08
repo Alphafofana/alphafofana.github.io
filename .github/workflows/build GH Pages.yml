@@ -66,3 +66,7 @@ jobs:
       run: git commit -m " build changes by GitHub Action" # add if statment for commitment issues.
     - name: push changes
       run: git push
+    - name: predeploy build
+      run: npm run build
+    - name: debloy build to GH pages
+      run: gh-pages -d build
