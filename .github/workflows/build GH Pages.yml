@@ -71,4 +71,5 @@ jobs:
     - name: debloy build to GH pages
       run: node  ./node_modules/gh-pages/bin/gh-pages.js -d build
       env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        Username: "GitHub Action"
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
