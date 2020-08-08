@@ -69,6 +69,6 @@ jobs:
     - name: predeploy build
       run: npm run build
     - name: debloy build to GH pages
-      run: | 
-        git credential-manager uninstall --force
-        node  ./node_modules/gh-pages/bin/gh-pages.js -d build -u "GitHub Action <action@github.com>"
+      run: node  ./node_modules/gh-pages/bin/gh-pages.js -d build
+      env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
