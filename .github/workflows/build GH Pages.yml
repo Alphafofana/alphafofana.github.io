@@ -69,9 +69,4 @@ jobs:
     - name: predeploy build
       run: npm run build
     - name: debloy build to GH pages
-      run: node  ./node_modules/gh-pages/bin/gh-pages.js -d build
-      env:
-        user_name: 'GitHub Action'
-        user_email: 'action@github.com'
-        github_token: ${{ secrets.PAT_GITHUB }}
-        #repository: ${{ github.repository }}
+      run: node  ./node_modules/gh-pages/bin/gh-pages.js -d build -u "GitHub Action <action@github.com>"
