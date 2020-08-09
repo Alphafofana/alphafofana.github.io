@@ -14,16 +14,16 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-      with:
-        persist-credentials: false
+      #with:
+        #persist-credentials: false
     - name: Use Node.js 
       uses: actions/setup-node@v1
       with:
-        node-version: '10.x'
+        node-version: '8.16.2'
     - run: npm install
 
     - name: predeploy build
       run: npm run build
     - name: debloy build to GH pages 🚀 # could use https://github.com/JamesIves/github-pages-deploy-action
-      run: node  ./node_modules/gh-pages/bin/gh-pages.js -d build -u "GitHub Action <action@github.com>" -r "https://GitHubAction:${{github.token}}@github.com/alphafofana/alphafofana.github.io.git"
+      run: node ./node_modules/gh-pages/bin/gh-pages.js -d build -u "GitHub Action <action@github.com>" -r "https://GitHubAction:${{github.token}}@github.com/alphafofana/alphafofana.github.io.git"
   
