@@ -26,7 +26,7 @@ jobs:
       run: | 
         git config --global user.email "action@github.com"
         git config --global user.name "GitHubAction"
-      #  git remote set-url origin https://${{ secrets.PAT_GITHUB }}@github.com/alphafofana>/alphafofana.github.io.git
+        git remote set-url origin "https://GitHubAction:${{github.token}}@github.com/alphafofana/alphafofana.github.io.git"
 
     - name: predeploy build
       run: npm run build
