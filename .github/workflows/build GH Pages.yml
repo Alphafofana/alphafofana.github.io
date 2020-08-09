@@ -66,9 +66,7 @@ jobs:
       run: git commit -m " build changes by GitHub Action" # add if statment for commitment issues.
     - name: push changes
       run: git push
-    - name: predeploy build
+    - name: predeploy/build project
       run: npm run build
-    - name: check remote
-      run: git remote -v
-    - name: debloy build to GH pages
-      run: node  ./node_modules/gh-pages/bin/gh-pages.js -d build -u "GitHub Action <action@github.com>" -r "https://${github_token}@github.com/alphafofana/alphafofana.github.io"
+    - name: debloy build to GH pages 🚀 # could use https://github.com/JamesIves/github-pages-deploy-action
+      run: node ./node_modules/gh-pages/bin/gh-pages.js -d build -r "https://GitHubAction:${{github.token}}@github.com/alphafofana/alphafofana.github.io.git"
