@@ -33,7 +33,7 @@ jobs:
     - name: check remote
       run: git remote -v
     - name: debloy build to GH pages
-      run: node  ./node_modules/gh-pages/bin/gh-pages.js -d build #-u "GitHub Action <action@github.com>" -r "https://${github_token}@github.com/alphafofana/alphafofana.github.io"
+      run: node  ./node_modules/gh-pages/bin/gh-pages.js -d build -u "GitHub Action <action@github.com>" #-r "https://${github_token}@github.com/alphafofana/alphafofana.github.io"
    # - name: Deploy 🚀
    #   uses: JamesIves/github-pages-deploy-action@3.5.9
    #   with:
