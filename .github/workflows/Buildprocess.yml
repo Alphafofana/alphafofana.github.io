@@ -32,11 +32,11 @@ jobs:
       run: npm run build
     - name: check remote
       run: git remote -v
-   # - name: debloy build to GH pages
-   #   run: node  ./node_modules/gh-pages/bin/gh-pages.js -d build -u "GitHub Action <action@github.com>" -r "https://${github_token}@github.com/alphafofana/alphafofana.github.io"
-    - name: Deploy 🚀
-      uses: JamesIves/github-pages-deploy-action@3.5.9
-      with:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        BRANCH: gh-pages # The branch the action should deploy to.
-        FOLDER: build # The folder the action should deploy.
+    - name: debloy build to GH pages
+      run: node  ./node_modules/gh-pages/bin/gh-pages.js -d build -u "GitHub Action <action@github.com>" -r "https://${github_token}@github.com/alphafofana/alphafofana.github.io"
+   # - name: Deploy 🚀
+   #   uses: JamesIves/github-pages-deploy-action@3.5.9
+   #   with:
+   #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+   #     BRANCH: gh-pages # The branch the action should deploy to.
+   #     FOLDER: build # The folder the action should deploy.
