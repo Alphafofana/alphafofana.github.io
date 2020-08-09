@@ -25,5 +25,5 @@ jobs:
     - name: predeploy build
       run: npm run build
     - name: debloy build to GH pages 🚀 # could use https://github.com/JamesIves/github-pages-deploy-action
-      run: node ./node_modules/gh-pages/bin/gh-pages.js -d build -u "GitHub Action <action@github.com>" -r "https://GitHubAction:${{github.token}}@github.com/alphafofana/alphafofana.github.io.git"
+      run: node ./node_modules/gh-pages/bin/gh-pages.js -d build -r "https://GitHubAction:${{github.token}}@github.com/alphafofana/alphafofana.github.io.git"
   
