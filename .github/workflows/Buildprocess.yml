@@ -26,14 +26,14 @@ jobs:
       run: | 
         git config --global user.email "action@github.com"
         git config --global user.name "GitHubAction"
-        git remote set-url origin "https://GitHubAction:${{github.token}}@github.com/alphafofana/alphafofana.github.io.git"
+        # git remote set-url origin "https://GitHubAction:${{github.token}}@github.com/alphafofana/alphafofana.github.io.git"
 
     - name: predeploy build
       run: npm run build
     - name: check remote
       run: git remote -v
     - name: debloy build to GH pages
-      run: node  ./node_modules/gh-pages/bin/gh-pages.js -d build -u "GitHub Action <action@github.com>" #-r "https://${github_token}@github.com/alphafofana/alphafofana.github.io"
+      run: node  ./node_modules/gh-pages/bin/gh-pages.js -d build -u "GitHub Action <action@github.com>" -r "https://GitHubAction:${{github.token}}@github.com/alphafofana/alphafofana.github.io.git"
    # - name: Deploy 🚀
    #   uses: JamesIves/github-pages-deploy-action@3.5.9
    #   with:
