@@ -16,27 +16,14 @@ jobs:
     - uses: actions/checkout@v2
       with:
         persist-credentials: false
-        #token: ${{ secrets.PAT_GITHUB }}
     - name: Use Node.js 
       uses: actions/setup-node@v1
       with:
         node-version: '10.x'
     - run: npm install
-    - name: git config user
-      run: | 
-        git config --global user.email "action@github.com"
-        git config --global user.name "GitHubAction"
-        # git remote set-url origin "https://GitHubAction:${{github.token}}@github.com/alphafofana/alphafofana.github.io.git"
 
     - name: predeploy build
       run: npm run build
-    - name: check remote
-      run: git remote -v
-    - name: debloy build to GH pages
+    - name: debloy build to GH pages 🚀 # could use https://github.com/JamesIves/github-pages-deploy-action
       run: node  ./node_modules/gh-pages/bin/gh-pages.js -d build -u "GitHub Action <action@github.com>" -r "https://GitHubAction:${{github.token}}@github.com/alphafofana/alphafofana.github.io.git"
-   # - name: Deploy 🚀
-   #   uses: JamesIves/github-pages-deploy-action@3.5.9
-   #   with:
-   #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-   #     BRANCH: gh-pages # The branch the action should deploy to.
-   #     FOLDER: build # The folder the action should deploy.
+  
