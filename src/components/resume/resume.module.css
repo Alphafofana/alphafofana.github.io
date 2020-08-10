@@ -4,11 +4,13 @@
 	width: 100%;
 }
 .resumeRow {
-	padding-top: 1cm;
-	padding-bottom: 1cm;
+	margin-top: 0.5cm;
+	margin-bottom: 0.5cm;
 }
 .resumeCol {
 	justify-content: center;
+	margin-top: 1cm;
+	margin-bottom: 1cm;
 }
 
 .loadingRow {

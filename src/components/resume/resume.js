@@ -42,12 +42,16 @@ class Resume extends Component {
 							className={`${css.resumeRow} justify-content-md-center`}
 						>
 							{[...Array(numPages)].map((e, i) => (
-								<Col className={css.esumeCol} md="auto">
+								<Col
+									md="auto"
+									sm={12}
+									className={css.resumeCol}
+								>
 									<Page
 										className=" shadow-lg"
 										//size="A4"
 										//loading={<Loading />}
-										scale={1.0}
+										//scale={1.0}
 										pageNumber={i + 1}
 									/>
 								</Col>

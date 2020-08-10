@@ -8,14 +8,28 @@ class about extends Component {
 		return (
 			<Container className={css.aboutbody} fluid>
 				<Row className={css.aboutRow}>
-					<Col className={css.aboutColImg} md={4}>
+					<Col
+						xl={4}
+						lg={4}
+						md={4}
+						sm={12}
+						xs={12}
+						className={css.aboutColImg}
+					>
 						<img
 							src={profile}
 							alt="profile"
 							className="rounded-circle shadow-lg"
 						/>
 					</Col>
-					<Col className={css.aboutColTxt} md={8}>
+					<Col
+						xl={8}
+						lg={8}
+						md={8}
+						sm={12}
+						xs={12}
+						className={css.aboutColTxt}
+					>
 						<h2>
 							About Me
 							<hr />

@@ -89,7 +89,9 @@ https://uigradients.com/#Instagram
 		background-position: 0% 7%;
 	}
 }
-
+.landingRow {
+	margin-top: 20px;
+}
 .bannerText h1 {
 	text-align: center;
 	font-family: "Istok Web", sans-serif;
@@ -99,7 +101,7 @@ https://uigradients.com/#Instagram
 }
 .bannerText hr {
 	border-top: 5px dotted white;
-	width: 35%;
+	width: 40%;
 	margin: 0 auto;
 }
 

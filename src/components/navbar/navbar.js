@@ -5,7 +5,7 @@ import {
 	Navbar,
 } from "react-bootstrap";
 //import css from "./navbar.module.css";
-import "./navbar.module.css";
+import css from "./navbar.module.css";
 import NavLink from "./navLink";
 
 /*JS Scrollspy (scrollspy.js)*/
@@ -22,7 +22,7 @@ const Navinbar = (props) => {
 
 	return (
 		<Navbar
-			expand="lg"
+			expand="sm"
 			variant="light"
 			fixed="top"
 			bg={isTop ? "transparent" : "gradient"}
@@ -34,7 +34,14 @@ const Navinbar = (props) => {
 					<NavLink type="link" name="< α />" to="" />
 				)}
 			</Navbar.Brand>
-			<Navbar.Collapse id="responsive-navbar-nav">
+			<Navbar.Toggle
+				aria-controls="responsive-navbar-nav"
+				//style={{ background: "black" }}
+			/>
+			<Navbar.Collapse
+				id="responsive-navbar-nav"
+				className={css.navbarCollapse}
+			>
 				{props.viwe === "landingpage" && (
 					<Nav className="mr-auto mt-2 mt-lg-0">
 						<Nav.Item>

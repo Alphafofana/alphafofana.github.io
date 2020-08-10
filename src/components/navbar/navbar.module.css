@@ -1,0 +1,9 @@
+/* change navbar background on collapse expand="sm"*/
+@media (max-width: 575.98px) {
+	.navbarCollapse {
+		background: linear-gradient(
+			rgba(245, 245, 245),
+			rgba(245, 245, 245, 0)
+		);
+	}
+}

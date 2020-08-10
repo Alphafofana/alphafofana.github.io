@@ -29,10 +29,13 @@ class landing extends Component {
 		return (
 			<Jumbotron fluid className={css.landingBody}>
 				<Container>
-					<Row className="landingRow">
+					<Row className={css.landingRow}>
 						<Col className={css.bannerText}>
-							<h1>Alpha Fofana</h1>
-							<hr />
+							<h1>
+								Alpha Fofana
+								<hr />
+							</h1>
+
 							<p>| Engineer | Programmer | ETC...</p>
 						</Col>
 					</Row>
@@ -40,6 +43,11 @@ class landing extends Component {
 						{socialLinks.map((socialLink) => {
 							return (
 								<Col
+									xl={3}
+									lg={3}
+									md={3}
+									sm={6}
+									xs={6}
 									className={css.socialLinkCol}
 									//xs lg="2"
 								>

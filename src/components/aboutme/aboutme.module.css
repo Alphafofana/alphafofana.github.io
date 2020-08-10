@@ -11,10 +11,16 @@
 .aboutColImg {
 	justify-content: center;
 	display: flex;
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
 
 .aboutColImg img {
 	height: 250px;
+}
+.aboutColTxt {
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
 .aboutColTxt h2 {
 	font-size: 3.5rem;
@@ -31,4 +37,13 @@
 	text-align: left;
 	margin: auto;
 	padding-top: 1em;
+}
+/* change text aligning on device width less than 768 */
+@media (max-width: 767.98px) {
+	.aboutColTxt {
+		text-align: center;
+	}
+	.aboutColTxt p {
+		text-align: center;
+	}
 }
