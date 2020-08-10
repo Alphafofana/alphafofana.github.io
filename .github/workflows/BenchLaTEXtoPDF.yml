@@ -1,0 +1,116 @@
+# This is a workflow for benchmarking utilitize for converting LaTEX to PDF.
+
+name: BenchLaTEXtoPDF
+
+# Action is triggered on:
+# - Manual workflow_dispatch
+on:
+    workflow_dispatch:
+
+# Workflow jobs that convert LaTEX to PDF
+jobs:
+    LaTEXtoPDF1:
+        runs-on: ubuntu-latest
+
+        steps:
+            #  Checks-out repository to access files
+            - name: Checkout Curriculum Vitae repo
+              uses: actions/checkout@v2
+              with:
+                  token: ${{ secrets.PAT_GITHUB }}
+                  repository: Alphafofana/Alpha_Fofana_CV
+
+            #---------DUT----------#
+            # Use latex-action to compile files to PDF
+            - name: Compile LaTeX document
+              uses: xu-cheng/latex-action@v2
+              with:
+                  root_file: main.tex
+            #----------------------#
+
+            # Upload the file as an artifact so it can be acessed
+            - name: Upload artifact
+              uses: actions/upload-artifact@master
+              with:
+                  name: my-artifact
+                  path: main.pdf
+
+    LaTEXtoPDF2:
+        runs-on: ubuntu-latest
+
+        steps:
+            #  Checks-out repository to access files
+            - name: Checkout Curriculum Vitae repo
+              uses: actions/checkout@v2
+              with:
+                  token: ${{ secrets.PAT_GITHUB }}
+                  repository: Alphafofana/Alpha_Fofana_CV
+
+            #---------DUT----------#
+            # Use latex-action to compile files to PDF
+            - name: Compile LaTeX document
+              uses: dante-ev/latex-action@master
+              with:
+                  root_file: main.tex
+            #----------------------#
+
+            # Upload the file as an artifact so it can be acessed
+            - name: Upload artifact
+              uses: actions/upload-artifact@master
+              with:
+                  name: my-artifact
+                  path: main.pdf
+    LaTEXtoPDF3:
+        runs-on: ubuntu-latest
+
+        steps:
+            #  Checks-out repository to access files
+            - name: Checkout Curriculum Vitae repo
+              uses: actions/checkout@v2
+              with:
+                  token: ${{ secrets.PAT_GITHUB }}
+                  repository: Alphafofana/Alpha_Fofana_CV
+
+            #---------DUT----------#
+            # Use latex-action to compile files to PDF
+            - name: Compile LaTeX document
+              uses: vinay0410/tectonic-action@master
+              env:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+              with:
+                  tex_path: main.tex
+            #----------------------#
+
+            # Upload the file as an artifact so it can be acessed
+            - name: Upload artifact
+              uses: actions/upload-artifact@master
+              with:
+                  name: my-artifact
+                  path: main.pdf
+    LaTEXtoPDF4:
+        runs-on: ubuntu-latest
+
+        steps:
+            #  Checks-out repository to access files
+            - name: Checkout Curriculum Vitae repo
+              uses: actions/checkout@v2
+              with:
+                  token: ${{ secrets.PAT_GITHUB }}
+                  repository: Alphafofana/Alpha_Fofana_CV
+
+            #---------DUT----------#
+            # Use latex-action to compile files to PDF
+            - name: Compile LaTeX document
+              uses: fredqi/tl-action@master
+              env:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+              with:
+                  tex_path: main.tex
+            #----------------------#
+
+            # Upload the file as an artifact so it can be acessed
+            - name: Upload artifact
+              uses: actions/upload-artifact@master
+              with:
+                  name: my-artifact
+                  path: main.pdf

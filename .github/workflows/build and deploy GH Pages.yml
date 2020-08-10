@@ -1,7 +1,7 @@
 # This is a workflow for building and deploying to GH Pages.
 name: Build and Deploy GH Pages
 
-# Action is triggers on:
+# Action is triggered on:
 # - Manual workflow_dispatch
 # - Push to the main branch of alphafofana.github.io
 # - Push to the main branch of Alpha_Fofana_CV (a resource branch)
