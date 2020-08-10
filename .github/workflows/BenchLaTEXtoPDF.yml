@@ -87,30 +87,27 @@ jobs:
               with:
                   name: my-artifact3
                   path: main.pdf
-    LaTEXtoPDF4:
-        runs-on: ubuntu-latest
-
-        steps:
-            #  Checks-out repository to access files
-            - name: Checkout Curriculum Vitae repo
-              uses: actions/checkout@v2
-              with:
-                  token: ${{ secrets.PAT_GITHUB }}
-                  repository: Alphafofana/Alpha_Fofana_CV
-
-            #---------DUT----------#
-            # Use latex-action to compile files to PDF
-            - name: Compile LaTeX document
-              uses: fredqi/tl-action@master
-              env:
-                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-              with:
-                  tex_files: main.tex
-            #----------------------#
-
-            # Upload the file as an artifact so it can be acessed
-            - name: Upload artifact
-              uses: actions/upload-artifact@master
-              with:
-                  name: my-artifact4
-                  path: main.pdf
+    # LaTEXtoPDF4:
+    #     runs-on: ubuntu-latest
+    #     steps:
+    #         #  Checks-out repository to access files
+    #         - name: Checkout Curriculum Vitae repo
+    #           uses: actions/checkout@v2
+    #           with:
+    #               token: ${{ secrets.PAT_GITHUB }}
+    #               repository: Alphafofana/Alpha_Fofana_CV
+    #         #---------DUT----------#
+    #         # Use latex-action to compile files to PDF
+    #         - name: Compile LaTeX document
+    #           uses: fredqi/tl-action@master
+    #           env:
+    #               GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    #           with:
+    #               tex_files: main.tex
+    #         #----------------------#
+    #         # Upload the file as an artifact so it can be acessed
+    #         - name: Upload artifact
+    #           uses: actions/upload-artifact@master
+    #           with:
+    #               name: my-artifact4
+    #               path: main.pdf
