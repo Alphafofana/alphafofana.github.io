@@ -1,0 +1,101 @@
+# This is a workflow for building and deploying to GH Pages.
+name: build and deploy GH Pages
+
+# Action is triggers on:  
+# - Manual workflow_dispatch
+# - Push to the main branch of alphafofana.github.io
+# - Push to the main branch of Alpha_Fofana_CV (a resource branch)
+on: 
+  workflow_dispatch:
+
+# The workflow is made up of two sequential jobs, 
+# one to build and get a PDF and one to build and deploy to GH pages.  
+jobs:
+  
+  # A job to build LaTeX files to PDF
+  LaTeXtoPDF:
+    
+    runs-on: ubuntu-latest
+
+    steps:
+      
+    #  Checks-out repository to access files
+    - name: Checkout CV repo 🔀
+      uses: actions/checkout@v2
+      with:
+        token: ${{ secrets.PAT_GITHUB }}
+        repository: Alphafofana/Alpha_Fofana_CV
+    
+    # Use latex-action to compile files to PDF
+    - name: Compile LaTeX document 🖹➡️🖺
+      uses: xu-cheng/latex-action@v2
+      with:
+        root_file: main.tex
+    
+    # Rename the compiles PDF file 
+    - name: Rename file 📝
+      run: mv  main.pdf Alpha_Fofana_CV.pdf
+    
+    # Upload the file as an artifact so it can be acessed 
+    - name: Upload artifact 📤
+      uses: actions/upload-artifact@master
+      with:
+        name: CV-artifact
+        path: Alpha_Fofana_CV.pdf
+        #if-no-files-found: error # 'warn' or 'ignore' are also available, defaults to `warn`
+  
+  # A job to build and deploy to GH pages
+  build_and_deploy:
+    
+    # Needs the LaTeXtoPDF job to finish first
+    needs: LaTeXtoPDF
+    runs-on: windows-latest
+
+    steps:
+    
+    #  Checks-out repository to access files
+    - name: Checkout repo 🔀
+      uses: actions/checkout@v2
+    
+    # Download artifact from previous job
+    - name: Download artifact 📥 
+      uses: actions/download-artifact@v2
+      with:
+        name: CV-artifact
+        path: ./public
+        #path: ${GITHUB_WORKSPACE}/public
+      
+       
+    # Setup/Install Node  
+    - name: Use Node.js ☋
+      uses: actions/setup-node@v1
+      with:
+        node-version: '8.16.2'
+    # Install dependencies
+    - run: npm install
+    
+    # Run GetProjects script to get GitHubproject through GraphQ
+    - name: Run GetProjects ▶️
+      run: node ./src/utils/GitHub_GraphQL_GetProjects ${{ secrets.GITHUB_TOKEN }}
+    
+    # Commit and push everythin back to github
+    - name: Get git status
+      run: git status
+    - name: Configure git user  🔧
+      run: | 
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+    - name: Add modified files to staging 
+      run: git add *
+    - name: Commit changes
+      run: git commit -m " build changes by GitHub Action" # add if statment for commitment issues.
+    - name: Push changes
+      run: git push
+    
+    # Build react project as a predeploy stage
+    - name: predeploy/build project 🔨👷
+      run: npm run build
+    
+    # Deploy build to GH pages
+    - name: debloy build to GH pages 🚀 # could use https://github.com/JamesIves/github-pages-deploy-action
+      run: node ./node_modules/gh-pages/bin/gh-pages.js -d build -r "https://GitHubAction:${{github.token}}@github.com/alphafofana/alphafofana.github.io.git"
