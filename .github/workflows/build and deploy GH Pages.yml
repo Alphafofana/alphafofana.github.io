@@ -54,7 +54,7 @@ jobs:
     steps:
     
     #  Checks-out repository to access files
-    - name: Checkout ${{ GITHUB_WORKSPACE }} 🔀
+    - name: Checkout repo 🔀
       uses: actions/checkout@v2
     
     # Download artifact from previous job
