@@ -36,7 +36,10 @@ class landing extends Component {
 								<hr />
 							</h1>
 
-							<p>| Engineer | Programmer | ETC...</p>
+							<p>
+								| Engineer | Programmer | Embedded developer |
+								Web developer |
+							</p>
 						</Col>
 					</Row>
 					<Row className={css.socialLinksRow}>
