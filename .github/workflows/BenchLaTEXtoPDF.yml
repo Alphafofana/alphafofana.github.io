@@ -32,7 +32,7 @@ jobs:
             - name: Upload artifact
               uses: actions/upload-artifact@master
               with:
-                  name: my-artifact
+                  name: my-artifact1
                   path: main.pdf
 
     LaTEXtoPDF2:
@@ -58,7 +58,7 @@ jobs:
             - name: Upload artifact
               uses: actions/upload-artifact@master
               with:
-                  name: my-artifact
+                  name: my-artifact2
                   path: main.pdf
     LaTEXtoPDF3:
         runs-on: ubuntu-latest
@@ -85,7 +85,7 @@ jobs:
             - name: Upload artifact
               uses: actions/upload-artifact@master
               with:
-                  name: my-artifact
+                  name: my-artifact3
                   path: main.pdf
     LaTEXtoPDF4:
         runs-on: ubuntu-latest
@@ -105,12 +105,12 @@ jobs:
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
               with:
-                  tex_path: main.tex
+                  tex_files: main.tex
             #----------------------#
 
             # Upload the file as an artifact so it can be acessed
             - name: Upload artifact
               uses: actions/upload-artifact@master
               with:
-                  name: my-artifact
+                  name: my-artifact4
                   path: main.pdf
