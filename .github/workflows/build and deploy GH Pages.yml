@@ -81,7 +81,7 @@ jobs:
     # Commit and push everythin back to github
     - name: Get git status
       run: git status
-    - name: Configure git user
+    - name: Configure git user  🔧
       run: | 
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
