@@ -20,7 +20,7 @@ const contactItems = [
 	{
 		/* Linkedin details */
 		name: "Linkedin",
-		info: "FofanaAlpha",
+		info: "Alpha Fofana",
 		iconId: "fa fa-linkedin",
 		hrefId: "https://www.linkedin.com/in/alpha-fofana-7b598162",
 	},
@@ -34,7 +34,7 @@ const contactItems = [
 	{
 		/* Instagram details */
 		name: "Facebook",
-		info: "AlphaFofana",
+		info: "alphafofana",
 		iconId: " fa fa-instagram",
 		hrefId: "https://www.instagram.com/alphafofana/",
 	},
@@ -44,23 +44,43 @@ class contact extends Component {
 		return (
 			<Container fluid className={css.contactBody}>
 				<Row className={css.contactRow}>
-					<Col className={css.contactColImg} md={4}>
+					<Col
+						className={css.contactColImg}
+						xl={3}
+						lg={4}
+						md={5}
+						sm={8}
+						xs={12}
+					>
 						<img
 							src={profile}
 							alt="profile"
 							class="rounded-circle shadow-lg"
 						/>
 					</Col>
-					<Col md={4}>
+					<Col
+						className={css.contactColinfo}
+						xl={3}
+						lg={4}
+						md={5}
+						sm={8}
+						xs={10}
+					>
 						<h2>Contact me</h2>
 						<ListGroup variant="flush" className={css.contactinfo}>
 							{contactItems.map((contactItem) => {
 								return (
 									<ListGroup.Item action>
 										<Row>
-											<Col md={1}>
+											<Col
+												xl={1}
+												lg={1}
+												md={1}
+												sm={1}
+												xs={1}
+											>
 												<i
-													class={contactItem.iconId}
+													class={`${contactItem.iconId} ${css.icons}`}
 													aria-hidden="true"
 												/>
 											</Col>

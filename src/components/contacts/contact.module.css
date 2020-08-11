@@ -15,9 +15,18 @@
 
 .contactColImg img {
 	height: 250px;
+	margin-top: 2cm;
+	margin-bottom: 1cm;
 }
 
 .contactinfo {
 	font-size: 20px;
 	font-family: Anton;
+	margin-bottom: 1cm;
+}
+/* change text aligning on device width less than 767 */
+@media (max-width: 767.98px) {
+	.contactColinfo h2 {
+		text-align: center;
+	}
 }

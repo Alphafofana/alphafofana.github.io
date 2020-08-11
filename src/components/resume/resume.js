@@ -29,7 +29,11 @@ class Resume extends Component {
 			//	pageNumber,
 			numPages,
 		} = this.state;
-		console.log(numPages);
+		//console.log(numPages);
+
+		let dw = window.matchMedia("(max-width: 650px)");
+		//console.log(dw);
+
 		return (
 			<React.Fragment>
 				<Container classname={css.resumebody} fluid>
@@ -49,9 +53,8 @@ class Resume extends Component {
 								>
 									<Page
 										className=" shadow-lg"
-										//size="A4"
 										//loading={<Loading />}
-										//scale={1.0}
+										scale={dw.matches ? 0.5 : 1.0}
 										pageNumber={i + 1}
 									/>
 								</Col>
