@@ -16,5 +16,11 @@
 .loadingRow {
 	justify-content: center;
 	align-items: center;
-	width: 100%;
+	width: auto;
 }
+/* force devises with a smaller width to observe this style */
+/* @media (min-width: 628px) {
+	.react-pdf__Document {
+		min-width: 1000px;
+	}
+} */

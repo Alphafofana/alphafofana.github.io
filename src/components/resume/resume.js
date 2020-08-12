@@ -10,7 +10,7 @@ import {
 } from "react-bootstrap";
 import css from "./resume.module.css";
 import { pdfjs, Document, Page } from "react-pdf";
-import { Link } from "react-router-dom";
+import CV from "../../assets/Curriculum_Vitae_Template.pdf";
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
@@ -47,15 +47,23 @@ class Resume extends Component {
 						>
 							{[...Array(numPages)].map((e, i) => (
 								<Col
+									xl="auto"
+									lg="auto"
 									md="auto"
-									sm={12}
+									sm="auto"
+									xs="auto"
 									className={css.resumeCol}
 								>
 									<Page
 										className=" shadow-lg"
 										//loading={<Loading />}
-										scale={dw.matches ? 0.5 : 1.0}
+										width="300"
+										//width={dw.matches ?  : 1.0}
+										//scale={dw.matches ? 0.5 : 1.0}
 										pageNumber={i + 1}
+										renderTextLayer={false}
+										renderInteractiveForms={false}
+										//renderMode="svg"
 									/>
 								</Col>
 							))}
@@ -70,10 +78,11 @@ class Resume extends Component {
 					>
 						<Nav>
 							<Nav.Item>
-								<Link
-									to="Curriculum_Vitae_Template.pdf"
+								<a
+									href={CV}
 									target="_blank"
-									download
+									rel="noopener noreferrer"
+									download="Alpha_Fofana_CV"
 								>
 									<Button variant="success">
 										<i
@@ -82,7 +91,7 @@ class Resume extends Component {
 										/>{" "}
 										Download
 									</Button>{" "}
-								</Link>
+								</a>
 								<Button
 									variant="primary"
 									href="https://www.linkedin.com/in/alpha-fofana-7b598162"
