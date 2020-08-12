@@ -24,6 +24,30 @@
 	font-family: Anton;
 	margin-bottom: 1cm;
 }
+
+.contactinfoListGroup a {
+	color: #495057;
+	text-decoration: none;
+}
+.contactinfoListGroup :hover {
+	/* background-color: red; */
+	background-color: #f8f9fa;
+}
+.contactinfoListGroup a:active {
+	/* background-color: red; */
+	background-color: #f8f9fa !important;
+}
+
+.list-group-item.active {
+	color: #495057 !important;
+	background-color: #f8f9fa !important;
+	border-color: #f8f9fa !important;
+}
+.active {
+	color: #495057 !important;
+	background-color: #f8f9fa !important;
+	border-color: #f8f9fa !important;
+}
 /* change text aligning on device width less than 767 */
 @media (max-width: 767.98px) {
 	.contactColinfo h2 {

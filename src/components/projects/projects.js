@@ -9,7 +9,7 @@ class projects extends Component {
 	render() {
 		return (
 			<Tab.Container defaultActiveKey={projectTags[0]}>
-				<Col className={css.projectsColHeading} md={12}>
+				<Col className={css.projectsColHeading}>
 					<h2>
 						Projects
 						<hr />

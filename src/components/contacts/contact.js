@@ -8,14 +8,14 @@ const contactItems = [
 		name: "Phone",
 		info: "(+46) 730 00 00 00",
 		iconId: "fa fa-phone-square",
-		hrefId: "",
+		hrefId: undefined,
 	},
 	{
 		/* Email details */
 		name: "Mail",
 		info: "mail details",
 		iconId: "fa fa-envelope",
-		hrefId: "mail",
+		hrefId: "mailto:name@email.com",
 	},
 	{
 		/* Linkedin details */
@@ -67,26 +67,36 @@ class contact extends Component {
 						xs={10}
 					>
 						<h2>Contact me</h2>
-						<ListGroup variant="flush" className={css.contactinfo}>
+						<ListGroup
+							variant="flush"
+							className={`${css.contactinfoListGroup} shadow-lg`}
+						>
 							{contactItems.map((contactItem) => {
 								return (
-									<ListGroup.Item action>
-										<Row>
-											<Col
-												xl={1}
-												lg={1}
-												md={1}
-												sm={1}
-												xs={1}
-											>
-												<i
-													class={`${contactItem.iconId} ${css.icons}`}
-													aria-hidden="true"
-												/>
-											</Col>
-											<Col>{contactItem.info}</Col>
-										</Row>
-									</ListGroup.Item>
+									<a
+										href={contactItem.hrefId}
+										target="_blank"
+										rel="noopener noreferrer"
+									>
+										<ListGroup.Item action>
+											{/*<ListGroup.Item as={SafeAnchor}>*/}
+											<Row>
+												<Col
+													xl={2}
+													lg={2}
+													md={2}
+													sm={2}
+													xs={2}
+												>
+													<i
+														class={`${contactItem.iconId} ${css.icons}`}
+														aria-hidden="true"
+													/>
+												</Col>
+												<Col>{contactItem.info}</Col>
+											</Row>
+										</ListGroup.Item>
+									</a>
 								);
 							})}
 						</ListGroup>

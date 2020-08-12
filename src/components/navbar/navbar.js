@@ -22,6 +22,7 @@ const Navinbar = (props) => {
 
 	return (
 		<Navbar
+			collapseOnSelect
 			expand="sm"
 			variant="light"
 			fixed="top"
@@ -61,6 +62,9 @@ const Navinbar = (props) => {
 						<Nav.Item>
 							<NavLink type="link" name="Resume" to="/resume" />
 						</Nav.Item>
+						<Nav.Item>
+							<NavLink type="link" name="Contact" to="/contact" />
+						</Nav.Item>
 					</Nav>
 				)}
 				{props.viwe === "resume" && (
@@ -77,6 +81,9 @@ const Navinbar = (props) => {
 					<Nav className="mr-auto mt-2 mt-lg-0">
 						<Nav.Item>
 							<NavLink type="link" name="Home" to="" />
+						</Nav.Item>
+						<Nav.Item>
+							<NavLink type="link" name="Resume" to="/resume" />
 						</Nav.Item>
 					</Nav>
 				)}

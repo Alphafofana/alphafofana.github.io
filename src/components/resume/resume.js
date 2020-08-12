@@ -31,8 +31,9 @@ class Resume extends Component {
 		} = this.state;
 		//console.log(numPages);
 
-		let dw = window.matchMedia("(max-width: 650px)");
+		let smallDevice = window.matchMedia("(max-width: 650px)");
 		//console.log(dw);
+		//console.log(window.screen.width);
 
 		return (
 			<React.Fragment>
@@ -57,13 +58,15 @@ class Resume extends Component {
 									<Page
 										className=" shadow-lg"
 										//loading={<Loading />}
-										width="300"
-										//width={dw.matches ?  : 1.0}
-										//scale={dw.matches ? 0.5 : 1.0}
+										width={
+											smallDevice.matches
+												? window.screen.width - 30
+												: "595"
+										}
 										pageNumber={i + 1}
 										renderTextLayer={false}
 										renderInteractiveForms={false}
-										//renderMode="svg"
+										renderMode="svg"
 									/>
 								</Col>
 							))}
@@ -76,7 +79,7 @@ class Resume extends Component {
 						fixed="bottom"
 						bg="transparent"
 					>
-						<Nav>
+						<Nav className={css.downloadNav}>
 							<Nav.Item>
 								<a
 									href={CV}
