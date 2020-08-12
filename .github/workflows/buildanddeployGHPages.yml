@@ -11,7 +11,7 @@ on:
 #      branches:
 #        - master
     repository_dispatch:
-      types: [build-and-deploy-gh-pages]
+      types: [build]
 
 # The workflow is made up of two sequential jobs,
 # one to build and get a PDF and one to build and deploy to GH pages.
