@@ -11,6 +11,7 @@ on:
 #      branches:
 #        - master
     repository_dispatch:
+        types: [build-and-deploy-gh-pages]
 
 
 # The workflow is made up of two sequential jobs,
