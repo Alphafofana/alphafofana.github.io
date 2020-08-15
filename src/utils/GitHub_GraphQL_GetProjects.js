@@ -1,19 +1,19 @@
 //GitHub GraphQL API client for browsers and Node
 
-var rp = require("request-promise");
-var result = require("lodash/result");
-var each = require("lodash/each");
-var fs = require("fs");
-var path = require("path");
+const rp = require("request-promise");
+const result = require("lodash/result");
+const each = require("lodash/each");
+const fs = require("fs");
+const path = require("path");
 
-var args = process.argv.slice(2);
+let args = process.argv.slice(2);
 let GITHUB_PAT;
 
 args[0] === undefined
 	? (GITHUB_PAT = process.env.GITHUB_PAT)
 	: (GITHUB_PAT = args[0]);
 
-const _getCommentObject = () => {
+const getCommentObject = () => {
 	let comment;
 	args[0] === undefined
 		? (comment = {
@@ -25,7 +25,7 @@ const _getCommentObject = () => {
 	return comment;
 };
 
-const _githubFetcher = (query) => {
+const githubRequest = (query) => {
 	const requestBody = { query };
 	return rp({
 		uri: "https://api.github.com/graphql",
@@ -39,11 +39,7 @@ const _githubFetcher = (query) => {
 	});
 };
 
-const _generateProjectReposQuery = (
-	totalResults = 100,
-	nextId = null,
-	repositoryType
-) => {
+const generateQuery = (totalResults = 100, nextId = null, repositoryType) => {
 	const offset = nextId ? `after:"${nextId}"` : "";
 	return `{
       user(login: "Alphafofana") {
@@ -81,13 +77,13 @@ const _generateProjectReposQuery = (
     }`;
 };
 
-const _recursiveProjectGetter = (queryParam, queryResult, repositoryType) => {
-	const query = _generateProjectReposQuery(
+const getProjects = (queryParam, queryResult, repositoryType) => {
+	const query = generateQuery(
 		queryParam.totalResults,
 		queryParam.nextId,
 		repositoryType
 	);
-	return _githubFetcher(query).then((response) => {
+	return githubRequest(query).then((response) => {
 		const nextPageInfo = result(
 			response,
 			`data.user.${repositoryType}.pageInfo`,
@@ -99,18 +95,14 @@ const _recursiveProjectGetter = (queryParam, queryResult, repositoryType) => {
 		if (nextPageInfo.hasNextPage) {
 			queryParam.nextId = nextPageInfo.endCursor;
 			queryResult.push(response);
-			return _recursiveProjectGetter(
-				queryParam,
-				queryResult,
-				repositoryType
-			);
+			return getProjects(queryParam, queryResult, repositoryType);
 		}
 		queryResult.push(response);
 		return queryResult;
 	});
 };
 
-const _getMergedRepositoryInfo = (resultArray = [], repositoryType) => {
+const mergeRepoInfo = (resultArray = [], repositoryType) => {
 	const nodes = [];
 	each(resultArray, (res) => {
 		const resultNodes = result(
@@ -119,38 +111,39 @@ const _getMergedRepositoryInfo = (resultArray = [], repositoryType) => {
 			[]
 		);
 
-		nodes.push(_getCommentObject());
+		nodes.push(getCommentObject());
 		nodes.push(...resultNodes);
 		console.log(nodes);
 	});
 	return nodes;
 };
 
-const _writeJSON = (filename, data) => {
+const writeJSON = (filename, data) => {
 	const filePath = path.resolve(__dirname, "../assets", filename);
 	fs.writeFileSync(filePath, data);
 	return filePath;
 };
 
-const _getAllProjects = (repositoryType) => {
+const getAllProjects = (repositoryType) => {
 	const queryResult = [];
 	const queryParam = {
 		totalResults: 100,
 		nextId: null,
 	};
-	return _recursiveProjectGetter(
-		queryParam,
-		queryResult,
-		repositoryType
-	).then((data) => _getMergedRepositoryInfo(data, repositoryType));
+	return getProjects(queryParam, queryResult, repositoryType).then((data) =>
+		mergeRepoInfo(data, repositoryType)
+	);
 };
 
 // MAIN STATEMENT THAT EXECUTES THE ABOVE FUNCTIONS
 // BASICALLY THIS GETS ALL THE REPOS AND CONTRIBUTIONS FROM GITHUB
 
 Promise.all([
-	_getAllProjects("repositories").then((data) =>
-		_writeJSON("projects.json", JSON.stringify(data, null, "\t"))
+	getAllProjects("repositories").then((data) =>
+		writeJSON("projects.json", JSON.stringify(data, null, "\t"))
+	),
+	getAllProjects("contributedRepositories").then((data) =>
+		_writeJSON("contributions.json", JSON.stringify(data))
 	),
 ])
 	.then((filepaths) => console.log("updated files", filepaths))

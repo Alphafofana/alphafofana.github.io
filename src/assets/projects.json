@@ -1,6 +1,6 @@
 [
 	{
-		"_comment": "GH actions update, 2020-8-13 11:27:48"
+		"_comment": "manual update, 2020-8-15 18:03:35"
 	},
 	{
 		"name": "Public-Repository",
@@ -70,6 +70,24 @@
 		},
 		"homepageUrl": null,
 		"description": null,
+		"repositoryTopics": {
+			"nodes": []
+		}
+	},
+	{
+		"name": "resume",
+		"url": "https://github.com/Alphafofana/resume",
+		"stargazers": {
+			"totalCount": 0
+		},
+		"owner": {
+			"login": "Alphafofana"
+		},
+		"forks": {
+			"totalCount": 0
+		},
+		"homepageUrl": "http://www.linkedin.com/in/dcousineau",
+		"description": "The LaTeX source code to my \"nice\" resume.",
 		"repositoryTopics": {
 			"nodes": []
 		}
