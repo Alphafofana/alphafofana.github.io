@@ -48,7 +48,15 @@ const generateQuery = (totalResults = 100, nextId = null, repositoryType) => {
         ${repositoryType} (first :${totalResults} ${offset} privacy: PUBLIC) {
           nodes {
           	name,
-            url,
+			url,
+			languages(first: 50, orderBy: {field: SIZE, direction: DESC}) {
+				edges {
+				  size
+				  node {
+					name
+				  }
+				}
+			},
             stargazers{
               totalCount
             },
@@ -141,9 +149,6 @@ const getAllProjects = (repositoryType) => {
 Promise.all([
 	getAllProjects("repositories").then((data) =>
 		writeJSON("projects.json", JSON.stringify(data, null, "\t"))
-	),
-	getAllProjects("contributedRepositories").then((data) =>
-		_writeJSON("contributions.json", JSON.stringify(data))
 	),
 ])
 	.then((filepaths) => console.log("updated files", filepaths))
