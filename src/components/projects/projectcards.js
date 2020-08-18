@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Card, Button, Col } from "react-bootstrap";
 import css from "./projectcards.module.css";
+import LinguistWidget from "./linguistWidget";
 import projectsList from "../../assets/testprojects.json";
 import { result, orderBy } from "lodash";
 
@@ -16,19 +17,23 @@ class projectcards extends Component {
 		return projects.map((eachProject, i) => {
 			const {
 				name,
-				openGraphImageUrl,
-				//	url,
+				url,
+				languages,
 				//	stargazers,
-				//	url,
-				//	repositoryTopics,
+				//	owner,
 				//	forks,
-				description, //SocialMediaImage
-				//	homepageUrl,
+				//	repositoryTopics,
+				homepageUrl,
+				description,
+				openGraphImageUrl,
+				//	repositoryTopics
 			} = eachProject;
 			//console.log(url);
 			return (
 				<Col md={4}>
-					<Card className="shadow-lg p-3 mb-5">
+					<Card
+						className={`${css.projectsCardCol} shadow-lg p-3 mb-5`}
+					>
 						<Card.Img
 							className={`${css.CardImg} rounded mx-auto d-block`}
 							variant="top"
@@ -38,21 +43,36 @@ class projectcards extends Component {
 							<Card.Title>{name}</Card.Title>
 							<Card.Text>{description}</Card.Text>
 							<>
-								<Button variant="outline-secondary" size="sm">
+								<Button
+									variant="outline-secondary"
+									href={url}
+									target="_blank"
+									rel="noopener noreferrer"
+									size="sm"
+								>
 									<i
 										className="fa fa-github"
 										aria-hidden="true"
 									/>{" "}
 									repo
 								</Button>{" "}
-								<Button variant="outline-secondary" size="sm">
-									<i
-										className="fa fa-github"
-										aria-hidden="true"
-									/>{" "}
-									demo
-								</Button>
+								{homepageUrl && (
+									<Button
+										variant="outline-secondary"
+										href={homepageUrl}
+										target="_blank"
+										rel="noopener noreferrer"
+										size="sm"
+									>
+										<i
+											className="fa fa-github"
+											aria-hidden="true"
+										/>{" "}
+										demo
+									</Button>
+								)}
 								<hr />
+								<LinguistWidget languages={languages.edges} />
 							</>
 						</Card.Body>
 					</Card>

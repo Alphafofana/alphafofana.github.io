@@ -1,12 +1,12 @@
 [
 	{
-		"_comment": "manual update, 2020-8-16 06:15:48"
+		"_comment": "manual update, 2020-8-18 05:55:38"
 	},
 	{
 		"name": "Public-Repository",
 		"url": "https://github.com/Alphafofana/Public-Repository",
 		"languages": {
-			"edges": [
+			"language": [
 				{
 					"size": 2990,
 					"node": {
@@ -26,6 +26,7 @@
 		},
 		"homepageUrl": null,
 		"description": null,
+		"openGraphImageUrl": "https://avatars3.githubusercontent.com/u/32291426?s=400&v=4",
 		"repositoryTopics": {
 			"nodes": []
 		}
@@ -34,7 +35,7 @@
 		"name": "Energy-harvesting",
 		"url": "https://github.com/CarlMossberg/Energy-harvesting",
 		"languages": {
-			"edges": [
+			"language": [
 				{
 					"size": 29567923,
 					"node": {
@@ -78,6 +79,7 @@
 		},
 		"homepageUrl": null,
 		"description": null,
+		"openGraphImageUrl": "https://avatars3.githubusercontent.com/u/44667683?s=400&v=4",
 		"repositoryTopics": {
 			"nodes": []
 		}
@@ -86,7 +88,7 @@
 		"name": "Thesis-project",
 		"url": "https://github.com/Alphafofana/Thesis-project",
 		"languages": {
-			"edges": [
+			"language": [
 				{
 					"size": 7615675,
 					"node": {
@@ -112,6 +114,7 @@
 		},
 		"homepageUrl": null,
 		"description": "Code for STM32 Development Boards used in Thesis project",
+		"openGraphImageUrl": "https://avatars3.githubusercontent.com/u/32291426?s=400&v=4",
 		"repositoryTopics": {
 			"nodes": []
 		}
@@ -120,9 +123,9 @@
 		"name": "alphafofana.github.io",
 		"url": "https://github.com/Alphafofana/alphafofana.github.io",
 		"languages": {
-			"edges": [
+			"language": [
 				{
-					"size": 25821,
+					"size": 25826,
 					"node": {
 						"name": "JavaScript"
 					}
@@ -150,36 +153,9 @@
 		"forks": {
 			"totalCount": 0
 		},
-		"homepageUrl": null,
+		"homepageUrl": "https://alphafofana.github.io/",
 		"description": null,
-		"repositoryTopics": {
-			"nodes": []
-		}
-	},
-	{
-		"name": "resume",
-		"url": "https://github.com/Alphafofana/resume",
-		"languages": {
-			"edges": [
-				{
-					"size": 9329,
-					"node": {
-						"name": "TeX"
-					}
-				}
-			]
-		},
-		"stargazers": {
-			"totalCount": 0
-		},
-		"owner": {
-			"login": "Alphafofana"
-		},
-		"forks": {
-			"totalCount": 0
-		},
-		"homepageUrl": "http://www.linkedin.com/in/dcousineau",
-		"description": "The LaTeX source code to my \"nice\" resume.",
+		"openGraphImageUrl": "https://avatars3.githubusercontent.com/u/32291426?s=400&v=4",
 		"repositoryTopics": {
 			"nodes": []
 		}

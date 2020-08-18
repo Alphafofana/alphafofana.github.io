@@ -5,9 +5,9 @@ import profile from "../../assets/profile.jpg";
 const contactItems = [
 	{
 		/* Phone details */
-		name: "Phone",
-		info: "(+46) 730 00 00 00",
-		iconId: "fa fa-phone-square",
+		name: "Location",
+		info: "Stockholm, Sweden",
+		iconId: "fa fa-map-marker",
 		hrefId: undefined,
 	},
 	{

@@ -23,7 +23,7 @@ class projects extends Component {
 					>
 						{projectTags.map((tag) => {
 							return (
-								<Nav.Item>
+								<Nav.Item className={css.projectsNavItem}>
 									<Nav.Link eventKey={tag}>
 										{tag.charAt(0).toUpperCase() +
 											tag.slice(1)}
@@ -35,7 +35,7 @@ class projects extends Component {
 				</Col>
 				<Col>
 					<Tab.Content>
-						{projectTags.map((tag) => {
+						{projectTags.map((tag, i) => {
 							return (
 								<Tab.Pane eventKey={tag}>
 									<Row className={css.projectsCardRow}>

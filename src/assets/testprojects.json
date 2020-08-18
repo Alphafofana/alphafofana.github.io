@@ -5,6 +5,40 @@
 	{
 		"name": "Awesome project",
 		"url": "https://github.com/Alphafofana/Public-Repository",
+		"languages": {
+			"edges": [
+				{
+					"size": 29567923,
+					"node": {
+						"name": "C"
+					}
+				},
+				{
+					"size": 706713,
+					"node": {
+						"name": "Assembly"
+					}
+				},
+				{
+					"size": 230495,
+					"node": {
+						"name": "C++"
+					}
+				},
+				{
+					"size": 1579,
+					"node": {
+						"name": "Batchfile"
+					}
+				},
+				{
+					"size": 1528,
+					"node": {
+						"name": "PowerShell"
+					}
+				}
+			]
+		},
 		"stargazers": {
 			"totalCount": 31
 		},
@@ -15,7 +49,7 @@
 			"totalCount": 22
 		},
 		"homepageUrl": null,
-		"description": "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
+		"description": "Neque porrio quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
 		"openGraphImageUrl": "https://cdn11.bigcommerce.com/s-fxfbopzgqf/product_images/uploaded_images/theprojectheader.jpg",
 		"repositoryTopics": {
 			"nodes": [
@@ -45,6 +79,16 @@
 	{
 		"name": "Hashtag project",
 		"url": "https://github.com/Alphafofana/Public-Repository",
+		"languages": {
+			"edges": [
+				{
+					"size": 2990,
+					"node": {
+						"name": "Java"
+					}
+				}
+			]
+		},
 		"stargazers": {
 			"totalCount": 34
 		},
@@ -85,6 +129,22 @@
 	{
 		"name": " Project 51",
 		"url": "https://github.com/Alphafofana/Public-Repository",
+		"languages": {
+			"edges": [
+				{
+					"size": 7615675,
+					"node": {
+						"name": "C"
+					}
+				},
+				{
+					"size": 216198,
+					"node": {
+						"name": "C++"
+					}
+				}
+			]
+		},
 		"stargazers": {
 			"totalCount": 35
 		},
@@ -94,7 +154,7 @@
 		"forks": {
 			"totalCount": 23
 		},
-		"homepageUrl": null,
+		"homepageUrl": "https://google.com",
 		"description": "Aliquam sodales a massa sed lacinia. Phasellus tristique lacus ac erat iaculis molestie. Nullam non lectus sed velit iaculis finibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed sit amet mauris id justo pellentesque blandit.",
 		"openGraphImageUrl": "https://i.ytimg.com/vi/jZ-AdfA618U/maxresdefault.jpg",
 		"repositoryTopics": {
@@ -125,6 +185,28 @@
 	{
 		"name": "ProjProject",
 		"url": "https://github.com/Alphafofana/Public-Repository",
+		"languages": {
+			"edges": [
+				{
+					"size": 25826,
+					"node": {
+						"name": "JavaScript"
+					}
+				},
+				{
+					"size": 5347,
+					"node": {
+						"name": "CSS"
+					}
+				},
+				{
+					"size": 2582,
+					"node": {
+						"name": "HTML"
+					}
+				}
+			]
+		},
 		"stargazers": {
 			"totalCount": 37
 		},
@@ -165,6 +247,28 @@
 	{
 		"name": "WOW Project",
 		"url": "https://github.com/Alphafofana/Public-Repository",
+		"languages": {
+			"edges": [
+				{
+					"size": 25826,
+					"node": {
+						"name": "JavaScript"
+					}
+				},
+				{
+					"size": 5347,
+					"node": {
+						"name": "CSS"
+					}
+				},
+				{
+					"size": 2582,
+					"node": {
+						"name": "HTML"
+					}
+				}
+			]
+		},
 		"stargazers": {
 			"totalCount": 3
 		},
@@ -205,6 +309,28 @@
 	{
 		"name": "Project GITA",
 		"url": "https://github.com/Alphafofana/Public-Repository",
+		"languages": {
+			"edges": [
+				{
+					"size": 25826,
+					"node": {
+						"name": "JavaScript"
+					}
+				},
+				{
+					"size": 5347,
+					"node": {
+						"name": "CSS"
+					}
+				},
+				{
+					"size": 2582,
+					"node": {
+						"name": "HTML"
+					}
+				}
+			]
+		},
 		"stargazers": {
 			"totalCount": 39
 		},
@@ -245,6 +371,28 @@
 	{
 		"name": "HOPA-GITGIT",
 		"url": "https://github.com/Alphafofana/Public-Repository",
+		"languages": {
+			"edges": [
+				{
+					"size": 25826,
+					"node": {
+						"name": "JavaScript"
+					}
+				},
+				{
+					"size": 5347,
+					"node": {
+						"name": "CSS"
+					}
+				},
+				{
+					"size": 2582,
+					"node": {
+						"name": "HTML"
+					}
+				}
+			]
+		},
 		"stargazers": {
 			"totalCount": 3
 		},
@@ -285,6 +433,28 @@
 	{
 		"name": "Project Danger",
 		"url": "https://github.com/Alphafofana/Public-Repository",
+		"languages": {
+			"edges": [
+				{
+					"size": 25826,
+					"node": {
+						"name": "JavaScript"
+					}
+				},
+				{
+					"size": 5347,
+					"node": {
+						"name": "CSS"
+					}
+				},
+				{
+					"size": 2582,
+					"node": {
+						"name": "HTML"
+					}
+				}
+			]
+		},
 		"stargazers": {
 			"totalCount": 35
 		},
@@ -325,6 +495,28 @@
 	{
 		"name": "WTF GITNATION",
 		"url": "https://github.com/Alphafofana/Public-Repository",
+		"languages": {
+			"edges": [
+				{
+					"size": 25826,
+					"node": {
+						"name": "JavaScript"
+					}
+				},
+				{
+					"size": 5347,
+					"node": {
+						"name": "CSS"
+					}
+				},
+				{
+					"size": 2582,
+					"node": {
+						"name": "HTML"
+					}
+				}
+			]
+		},
 		"stargazers": {
 			"totalCount": 31
 		},
@@ -365,6 +557,28 @@
 	{
 		"name": "PROJproj",
 		"url": "https://github.com/Alphafofana/Public-Repository",
+		"languages": {
+			"edges": [
+				{
+					"size": 25826,
+					"node": {
+						"name": "JavaScript"
+					}
+				},
+				{
+					"size": 5347,
+					"node": {
+						"name": "CSS"
+					}
+				},
+				{
+					"size": 2582,
+					"node": {
+						"name": "HTML"
+					}
+				}
+			]
+		},
 		"stargazers": {
 			"totalCount": 32
 		},
@@ -374,7 +588,7 @@
 		"forks": {
 			"totalCount": 22
 		},
-		"homepageUrl": null,
+		"homepageUrl": "https://google.com",
 		"description": "Pellentesque at lacinia eros. Praesent cursus commodo malesuada.",
 		"openGraphImageUrl": "https://64.media.tumblr.com/d86868eab83b7e1c72556fe312587bb0/tumblr_inline_mwj7t8Too71rot3ds.jpg",
 		"repositoryTopics": {
@@ -405,6 +619,28 @@
 	{
 		"name": "XYZ Project",
 		"url": "https://github.com/Alphafofana/Public-Repository",
+		"languages": {
+			"edges": [
+				{
+					"size": 25826,
+					"node": {
+						"name": "JavaScript"
+					}
+				},
+				{
+					"size": 5347,
+					"node": {
+						"name": "CSS"
+					}
+				},
+				{
+					"size": 2582,
+					"node": {
+						"name": "HTML"
+					}
+				}
+			]
+		},
 		"stargazers": {
 			"totalCount": 33
 		},
@@ -414,7 +650,7 @@
 		"forks": {
 			"totalCount": 23
 		},
-		"homepageUrl": null,
+		"homepageUrl": "https://google.com",
 		"description": "non dignissim mi ultricies ut. Duis feugiat nunc elementum, laoreet nisl id, luctus justo.",
 		"openGraphImageUrl": "https://images.ctfassets.net/ky20t1w4m8i5/3TKvRjneFsjuQaIascHpRx/e00098be9e8e1c9fd4e0f50364d8d069/Previewimage_20191211.jpg",
 		"repositoryTopics": {
@@ -445,6 +681,28 @@
 	{
 		"name": "No Fucks Given Project",
 		"url": "https://github.com/Alphafofana/Public-Repository",
+		"languages": {
+			"edges": [
+				{
+					"size": 25826,
+					"node": {
+						"name": "JavaScript"
+					}
+				},
+				{
+					"size": 5347,
+					"node": {
+						"name": "CSS"
+					}
+				},
+				{
+					"size": 2582,
+					"node": {
+						"name": "HTML"
+					}
+				}
+			]
+		},
 		"stargazers": {
 			"totalCount": 333
 		},
@@ -454,7 +712,7 @@
 		"forks": {
 			"totalCount": 222
 		},
-		"homepageUrl": null,
+		"homepageUrl": "https://google.com",
 		"description": "No fucks given",
 		"openGraphImageUrl": "https://cdn11.bigcommerce.com/s-fxfbopzgqf/product_images/uploaded_images/theprojectheader.jpg",
 		"repositoryTopics": {
@@ -485,6 +743,28 @@
 	{
 		"name": "BEAST project",
 		"url": "https://github.com/Alphafofana/Public-Repository",
+		"languages": {
+			"edges": [
+				{
+					"size": 25826,
+					"node": {
+						"name": "JavaScript"
+					}
+				},
+				{
+					"size": 5347,
+					"node": {
+						"name": "CSS"
+					}
+				},
+				{
+					"size": 2582,
+					"node": {
+						"name": "HTML"
+					}
+				}
+			]
+		},
 		"stargazers": {
 			"totalCount": 35
 		},
@@ -494,7 +774,7 @@
 		"forks": {
 			"totalCount": 24
 		},
-		"homepageUrl": null,
+		"homepageUrl": "https://google.com",
 		"description": "BEAST MODE ACTIVATED",
 		"openGraphImageUrl": "https://avatars3.githubusercontent.com/u/32291426?s=400&v=4",
 		"repositoryTopics": {
@@ -525,6 +805,28 @@
 	{
 		"name": "Project-X",
 		"url": "https://github.com/Alphafofana/Public-Repository",
+		"languages": {
+			"edges": [
+				{
+					"size": 25826,
+					"node": {
+						"name": "JavaScript"
+					}
+				},
+				{
+					"size": 5347,
+					"node": {
+						"name": "CSS"
+					}
+				},
+				{
+					"size": 2582,
+					"node": {
+						"name": "HTML"
+					}
+				}
+			]
+		},
 		"stargazers": {
 			"totalCount": 3
 		},
@@ -534,7 +836,7 @@
 		"forks": {
 			"totalCount": 2
 		},
-		"homepageUrl": null,
+		"homepageUrl": "https://google.com",
 		"description": "I'm on the pursuit of happiness and I know Everything that's shine ain't always gonna be gold (hey) I'll be fine once I get it, get it in, I'll be good",
 		"openGraphImageUrl": "https://avatars3.githubusercontent.com/u/32291426?s=400&v=4",
 		"repositoryTopics": {
@@ -565,6 +867,16 @@
 	{
 		"name": "Wrong Project 1",
 		"url": "https://github.com/Alphafofana/Public-Repository",
+		"languages": {
+			"edges": [
+				{
+					"size": 9329,
+					"node": {
+						"name": "TeX"
+					}
+				}
+			]
+		},
 		"stargazers": {
 			"totalCount": 3
 		},
@@ -574,7 +886,7 @@
 		"forks": {
 			"totalCount": 2
 		},
-		"homepageUrl": null,
+		"homepageUrl": "https://google.com",
 		"description": "ERROR error ERROR error ERROR error ERROR error ERROR error ERROR error",
 		"openGraphImageUrl": "https://avatars3.githubusercontent.com/u/32291426?s=400&v=4",
 		"repositoryTopics": {
@@ -605,6 +917,16 @@
 	{
 		"name": "Wrong Project 2",
 		"url": "https://cdn.windowsreport.com/wp-content/uploads/2018/07/Error-message-1.jpg",
+		"languages": {
+			"edges": [
+				{
+					"size": 9329,
+					"node": {
+						"name": "TeX"
+					}
+				}
+			]
+		},
 		"stargazers": {
 			"totalCount": 3
 		},

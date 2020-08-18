@@ -12,7 +12,11 @@
 	width: 95%;
 	margin-top: 0.05em;
 }
-.projectsCardRow {
+:global(.nav-link.active) {
+	background-color: #6c757d !important;
+}
+/* .projectsCardRow {
 	display: flex;
 	flex-wrap: wrap;
-}
+	align-items: stretch;
+} */
