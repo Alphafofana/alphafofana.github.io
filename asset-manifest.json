@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.db785225.chunk.css",
-    "main.js": "/static/js/main.145eeb2a.chunk.js",
-    "main.js.map": "/static/js/main.145eeb2a.chunk.js.map",
+    "main.css": "/static/css/main.69188f91.chunk.css",
+    "main.js": "/static/js/main.aa422813.chunk.js",
+    "main.js.map": "/static/js/main.aa422813.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.19ccc7f6.js",
     "runtime-main.js.map": "/static/js/runtime-main.19ccc7f6.js.map",
     "static/js/2.722cf04d.chunk.js": "/static/js/2.722cf04d.chunk.js",
     "static/js/2.722cf04d.chunk.js.map": "/static/js/2.722cf04d.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.9a826ef5f849429037a0ec15411e4f17.js": "/precache-manifest.9a826ef5f849429037a0ec15411e4f17.js",
+    "precache-manifest.a5eb27d87b402ba14ca2061cb801f0eb.js": "/precache-manifest.a5eb27d87b402ba14ca2061cb801f0eb.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.db785225.chunk.css.map": "/static/css/main.db785225.chunk.css.map",
+    "static/css/main.69188f91.chunk.css.map": "/static/css/main.69188f91.chunk.css.map",
     "static/js/2.722cf04d.chunk.js.LICENSE.txt": "/static/js/2.722cf04d.chunk.js.LICENSE.txt",
     "static/media/Curriculum_Vitae_Template.pdf": "/static/media/Curriculum_Vitae_Template.06a43853.pdf",
     "static/media/profile.jpg": "/static/media/profile.f35f5006.jpg"
@@ -18,7 +18,7 @@
   "entrypoints": [
     "static/js/runtime-main.19ccc7f6.js",
     "static/js/2.722cf04d.chunk.js",
-    "static/css/main.db785225.chunk.css",
-    "static/js/main.145eeb2a.chunk.js"
+    "static/css/main.69188f91.chunk.css",
+    "static/js/main.aa422813.chunk.js"
   ]
 }
