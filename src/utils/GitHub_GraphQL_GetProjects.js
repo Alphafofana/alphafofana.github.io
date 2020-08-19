@@ -26,7 +26,6 @@ const getCommentObject = () => {
 };
 
 const githubRequest = (query) => {
-	const requestBody = { query };
 	return rp({
 		uri: "https://api.github.com/graphql",
 		method: "post",
@@ -35,21 +34,25 @@ const githubRequest = (query) => {
 			Authorization: `bearer ${GITHUB_PAT}`,
 			"User-Agent": "Request-Promise",
 		},
-		body: requestBody,
+		body: { query },
 	});
 };
 
-const generateQuery = (totalResults = 100, nextId = null, repositoryType) => {
+const generateQuery = (
+	user = "Alphafofana",
+	totalResults = 100,
+	nextId = null
+) => {
 	const offset = nextId ? `after:"${nextId}"` : "";
 	return `{
-      user(login: "Alphafofana") {
+      user(login:"${user}") {
         bio,
         avatarUrl,
-        ${repositoryType} (first :${totalResults} ${offset} privacy: PUBLIC) {
+        repositories (first :${totalResults} ${offset} privacy: PUBLIC) {
           nodes {
           	name,
 			url,
-			languages(first: 50, orderBy: {field: SIZE, direction: DESC}) {
+			languages(first:${totalResults}, orderBy: {field: SIZE, direction: DESC}) {
 				language:edges {
 				  size
 				  node {
@@ -87,11 +90,7 @@ const generateQuery = (totalResults = 100, nextId = null, repositoryType) => {
 };
 
 const getProjects = (queryHandler) => {
-	queryHandler.query = generateQuery(
-		queryHandler.queryParam.totalResults,
-		queryHandler.queryParam.nextId,
-		"repositories"
-	);
+	queryHandler.query = generateQuery();
 	return githubRequest(queryHandler.query).then((response) => {
 		const nextPageInfo = result(
 			response,
@@ -111,14 +110,10 @@ const getProjects = (queryHandler) => {
 	});
 };
 
-const mergeRepoInfo = (resultArray = [], repositoryType) => {
+const mergeRepoInfo = (resultArray = []) => {
 	const nodes = [];
 	each(resultArray, (res) => {
-		const resultNodes = result(
-			res,
-			`data.user.${repositoryType}.nodes`,
-			[]
-		);
+		const resultNodes = result(res, `data.user.repositories.nodes`, []);
 
 		nodes.push(getCommentObject());
 		nodes.push(...resultNodes);
@@ -133,35 +128,22 @@ const writeJSON = (filename, data) => {
 	return filePath;
 };
 
-const queryResult = [];
-const queryParam = {
-	totalResults: 100,
-	nextId: null,
-};
-const getQueryHandler = () => {
-	const queryHandler = {
-		query: null,
-		queryResult: [],
-		queryParam: {
-			user: "Alphafofana",
-			totalResults: 100,
-			nextId: null,
-		},
-	};
-	return queryHandler;
-};
-
 // MAIN STATEMENT THAT EXECUTES THE ABOVE FUNCTIONS
 // BASICALLY THIS GETS ALL THE REPOS AND CONTRIBUTIONS FROM GITHUB
 
 Promise.all([
-	getProjects(getQueryHandler())
-		.then((data) => mergeRepoInfo(data, "repositories"))
+	getProjects(
+		(queryHandler = {
+			query: null,
+			queryResult: [],
+		})
+	)
+		.then((data) => mergeRepoInfo(data))
 		.then((data) =>
 			writeJSON("projects.json", JSON.stringify(data, null, "\t"))
 		),
 ])
-	.then((filepaths) => console.log("updated files", filepaths))
+	.then((filepaths) => console.log("Updated file", filepaths))
 	.catch((error) => {
 		console.log(error);
 		process.exit(-1);

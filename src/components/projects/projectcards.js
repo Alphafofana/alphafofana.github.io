@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Card, Button, Col } from "react-bootstrap";
 import css from "./projectcards.module.css";
-import LinguistWidget from "./linguistWidget";
+import LinguistModul from "./linguistModul";
 import projectsList from "../../assets/testprojects.json";
 import { result, orderBy } from "lodash";
 
@@ -72,7 +72,7 @@ class projectcards extends Component {
 									</Button>
 								)}
 								<hr />
-								<LinguistWidget languages={languages.edges} />
+								<LinguistModul languages={languages.edges} />
 							</>
 						</Card.Body>
 					</Card>

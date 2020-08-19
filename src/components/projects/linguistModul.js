@@ -7,9 +7,9 @@ import {
 	Tooltip,
 	OverlayTrigger,
 } from "react-bootstrap";
-import css from "./linguistWidget.module.css";
+import css from "./linguistModul.module.css";
 
-class linguistWidget extends Component {
+class linguistModul extends Component {
 	render() {
 		let totalbytes = 0;
 		const languageLabels = this.props.languages.map((language, i) => {
@@ -36,6 +36,7 @@ class linguistWidget extends Component {
 			<Container fluid className={css.linguistWidgetBody}>
 				<Row>
 					<Col>
+						<h6>Languages</h6>
 						<ProgressBar>
 							{this.props.languages.map((language, i) => {
 								const { size, node } = language;
@@ -79,4 +80,4 @@ class linguistWidget extends Component {
 	</Tooltip>
 ); */
 
-export default linguistWidget;
+export default linguistModul;

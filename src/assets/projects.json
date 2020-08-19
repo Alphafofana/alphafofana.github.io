@@ -1,6 +1,6 @@
 [
 	{
-		"_comment": "manual update, 2020-8-18 05:55:38"
+		"_comment": "manual update, 2020-8-19 02:23:33"
 	},
 	{
 		"name": "Public-Repository",
@@ -112,11 +112,27 @@
 		"forks": {
 			"totalCount": 0
 		},
-		"homepageUrl": null,
+		"homepageUrl": "http://www.diva-portal.org/smash/get/diva2:1348986/FULLTEXT01.pdf",
 		"description": "Code for STM32 Development Boards used in Thesis project",
-		"openGraphImageUrl": "https://avatars3.githubusercontent.com/u/32291426?s=400&v=4",
+		"openGraphImageUrl": "https://repository-images.githubusercontent.com/188740416/b03bd080-e1bd-11ea-9df5-7703bc418170",
 		"repositoryTopics": {
-			"nodes": []
+			"nodes": [
+				{
+					"topic": {
+						"name": "projects"
+					}
+				},
+				{
+					"topic": {
+						"name": "c"
+					}
+				},
+				{
+					"topic": {
+						"name": "thesis-project"
+					}
+				}
+			]
 		}
 	},
 	{
@@ -125,13 +141,13 @@
 		"languages": {
 			"language": [
 				{
-					"size": 25826,
+					"size": 28239,
 					"node": {
 						"name": "JavaScript"
 					}
 				},
 				{
-					"size": 5347,
+					"size": 13905,
 					"node": {
 						"name": "CSS"
 					}
