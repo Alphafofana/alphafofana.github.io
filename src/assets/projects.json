@@ -1,6 +1,6 @@
 [
 	{
-		"_comment": "manual update, 2020-8-19 02:23:33"
+		"_comment": "GH actions update, 2020-12-25 04:12:10"
 	},
 	{
 		"name": "Public-Repository",
@@ -141,13 +141,13 @@
 		"languages": {
 			"language": [
 				{
-					"size": 28239,
+					"size": 27852,
 					"node": {
 						"name": "JavaScript"
 					}
 				},
 				{
-					"size": 13905,
+					"size": 13903,
 					"node": {
 						"name": "CSS"
 					}
@@ -170,6 +170,47 @@
 			"totalCount": 0
 		},
 		"homepageUrl": "https://alphafofana.github.io/",
+		"description": null,
+		"openGraphImageUrl": "https://avatars3.githubusercontent.com/u/32291426?s=400&v=4",
+		"repositoryTopics": {
+			"nodes": []
+		}
+	},
+	{
+		"name": "queueify",
+		"url": "https://github.com/Alphafofana/queueify",
+		"languages": {
+			"language": [
+				{
+					"size": 228388,
+					"node": {
+						"name": "JavaScript"
+					}
+				},
+				{
+					"size": 5191,
+					"node": {
+						"name": "CSS"
+					}
+				},
+				{
+					"size": 2418,
+					"node": {
+						"name": "HTML"
+					}
+				}
+			]
+		},
+		"stargazers": {
+			"totalCount": 1
+		},
+		"owner": {
+			"login": "Alphafofana"
+		},
+		"forks": {
+			"totalCount": 0
+		},
+		"homepageUrl": null,
 		"description": null,
 		"openGraphImageUrl": "https://avatars3.githubusercontent.com/u/32291426?s=400&v=4",
 		"repositoryTopics": {
