@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "110e4b727889a0e68d840c292825f69f",
+    "revision": "8e4e7e2be7d97989e6f5071039b9c807",
     "url": "/index.html"
   },
   {
-    "revision": "ec8096d48456ce6b140f",
+    "revision": "72196610fbd42db32ba4",
     "url": "/static/css/main.d8ee6d72.chunk.css"
   },
   {
@@ -16,16 +16,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/js/2.2a9d3362.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "ec8096d48456ce6b140f",
-    "url": "/static/js/main.6d04b10f.chunk.js"
+    "revision": "72196610fbd42db32ba4",
+    "url": "/static/js/main.d032d1c9.chunk.js"
   },
   {
     "revision": "4f2b1704eab49d50853b",
     "url": "/static/js/runtime-main.19ccc7f6.js"
   },
   {
-    "revision": "06a43853ce79d36eaf0c415b58065b55",
-    "url": "/static/media/Curriculum_Vitae_Template.06a43853.pdf"
+    "revision": "ceb53bd4faa6b408e28cbbc3dbc1e0e8",
+    "url": "/static/media/Alpha_Fofana_CV.ceb53bd4.pdf"
   },
   {
     "revision": "f35f5006f97864352c4eb0b6e74ab8e1",
