@@ -9,7 +9,7 @@ import css from "./navbar.module.css";
 import NavLink from "./navLink";
 
 /*JS Scrollspy (scrollspy.js)*/
-const Navinbar = (props) => {
+const Navibar = (props) => {
 	const [isTop, setIsTop] = useState(true);
 	useEffect(() => {
 		document.addEventListener("scroll", () => {
@@ -44,7 +44,7 @@ const Navinbar = (props) => {
 				className={css.navbarCollapse}
 			>
 				{props.viwe === "landingpage" && (
-					<Nav className="mr-auto mt-2 mt-lg-0">
+					<Nav className="mr-auto mt-2 mt-lg-0" activeKey={null}>
 						<Nav.Item>
 							<NavLink
 								type="hashLink"
@@ -92,4 +92,4 @@ const Navinbar = (props) => {
 	);
 };
 
-export default Navinbar;
+export default Navibar;

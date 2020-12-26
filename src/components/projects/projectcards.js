@@ -14,7 +14,7 @@ class projectcards extends Component {
 			this.props.tag
 		);
 
-		return projects.map((eachProject, i) => {
+		return projects.map((eachProject, index) => {
 			const {
 				name,
 				url,
@@ -30,7 +30,7 @@ class projectcards extends Component {
 			} = eachProject;
 			//console.log(url);
 			return (
-				<Col md={4}>
+				<Col md={4} key={index}>
 					<Card
 						className={`${css.projectsCardCol} shadow-lg p-3 mb-5`}
 					>

@@ -52,6 +52,7 @@ class landing extends Component {
 									sm={6}
 									xs={6}
 									className={css.socialLinkCol}
+									key={socialLink.hrefId}
 									//xs lg="2"
 								>
 									<a

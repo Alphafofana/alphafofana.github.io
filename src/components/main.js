@@ -37,7 +37,6 @@ const Main = () => (
 				<Resume />
 			</Route>
 		</Switch>
-		{console.log(process.env.PUBLIC_URL)}
 	</HashRouter>
 	// </BrowserRouter>
 );

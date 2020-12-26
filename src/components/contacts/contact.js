@@ -4,7 +4,7 @@ import css from "./contact.module.css";
 import profile from "../../assets/profile.jpg";
 const contactItems = [
 	{
-		/* Phone details */
+		/* Location details */
 		name: "Location",
 		info: "Stockholm, Sweden",
 		iconId: "fa fa-map-marker",
@@ -13,9 +13,9 @@ const contactItems = [
 	{
 		/* Email details */
 		name: "Mail",
-		info: "mail details",
+		info: "alpha.fofana@live.se",
 		iconId: "fa fa-envelope",
-		hrefId: "mailto:name@email.com",
+		hrefId: "mailto:alpha.fofana@live.se",
 	},
 	{
 		/* Linkedin details */

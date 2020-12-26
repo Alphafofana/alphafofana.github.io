@@ -12,13 +12,14 @@ import css from "./linguistModul.module.css";
 class linguistModul extends Component {
 	render() {
 		let totalbytes = 0;
-		const languageLabels = this.props.languages.map((language, i) => {
+		const languageLabels = this.props.languages.map((language, index) => {
 			const { size, node } = language;
 			const { name } = node;
 			totalbytes = totalbytes + size;
 
 			return (
 				<Col
+					key={index}
 					className={css.languageLabelCol}
 					xl="auto"
 					lg="auto"
@@ -31,14 +32,13 @@ class linguistModul extends Component {
 				</Col>
 			);
 		});
-		console.log(languageLabels);
 		return (
 			<Container fluid className={css.linguistWidgetBody}>
 				<Row>
 					<Col>
 						<h6>Languages</h6>
 						<ProgressBar>
-							{this.props.languages.map((language, i) => {
+							{this.props.languages.map((language, index) => {
 								const { size, node } = language;
 								const { name } = node;
 								const percentage = (
@@ -47,6 +47,7 @@ class linguistModul extends Component {
 								).toFixed(2);
 								return (
 									<OverlayTrigger
+										key={index}
 										placement="top"
 										delay={{ show: 250, hide: 400 }}
 										overlay={
@@ -60,7 +61,7 @@ class linguistModul extends Component {
 											now={percentage}
 											label={`${percentage}%`}
 											isChild={true}
-											key={i}
+											key={index}
 										/>
 									</OverlayTrigger>
 								);

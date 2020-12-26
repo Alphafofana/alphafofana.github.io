@@ -10,7 +10,8 @@ import {
 } from "react-bootstrap";
 import css from "./resume.module.css";
 import { pdfjs, Document, Page } from "react-pdf";
-import CV from "../../assets/Curriculum_Vitae_Template.pdf";
+import CV from "../../assets/Alpha_Fofana_CV.pdf";
+import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
@@ -39,7 +40,7 @@ class Resume extends Component {
 			<React.Fragment>
 				<Container classname={css.resumebody} fluid>
 					<Document
-						file="Curriculum_Vitae_Template.pdf"
+						file="Alpha_Fofana_CV.pdf"
 						onLoadSuccess={this.onDocumentLoadSuccess}
 						loading={<Loading />}
 					>

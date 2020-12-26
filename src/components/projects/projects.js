@@ -21,9 +21,12 @@ class projects extends Component {
 						variant="pills"
 						className="flex-row justify-content-center p-3"
 					>
-						{projectTags.map((tag) => {
+						{projectTags.map((tag, index) => {
 							return (
-								<Nav.Item className={css.projectsNavItem}>
+								<Nav.Item
+									className={css.projectsNavItem}
+									key={index}
+								>
 									<Nav.Link eventKey={tag}>
 										{tag.charAt(0).toUpperCase() +
 											tag.slice(1)}
@@ -35,9 +38,9 @@ class projects extends Component {
 				</Col>
 				<Col>
 					<Tab.Content>
-						{projectTags.map((tag, i) => {
+						{projectTags.map((tag, index) => {
 							return (
-								<Tab.Pane eventKey={tag}>
+								<Tab.Pane eventKey={tag} key={index}>
 									<Row className={css.projectsCardRow}>
 										<Projectcards tag={tag} />
 									</Row>
