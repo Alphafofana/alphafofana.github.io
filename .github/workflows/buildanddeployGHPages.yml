@@ -59,12 +59,20 @@ jobs:
             - name: Checkout repo 🔀
               uses: actions/checkout@v2
 
-            # Download artifact from previous job
+            # Download artifact from previous job to public directory
             - name: Download artifact 📥
               uses: actions/download-artifact@v2
               with:
                   name: CV-artifact
                   path: ./public
+                  #path: ${GITHUB_WORKSPACE}/public
+            
+            # Download artifact from previous job to assests directory
+            - name: Download artifact 📥
+              uses: actions/download-artifact@v2
+              with:
+                  name: CV-artifact
+                  path: ./src/assests
                   #path: ${GITHUB_WORKSPACE}/public
 
             # Setup/Install Node
