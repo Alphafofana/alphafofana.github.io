@@ -1,6 +1,6 @@
 [
 	{
-		"_comment": "GH actions update, 2020-12-26 01:25:30"
+		"_comment": "GH actions update, 2021-7-3 22:18:58"
 	},
 	{
 		"name": "Public-Repository",
@@ -26,7 +26,7 @@
 		},
 		"homepageUrl": null,
 		"description": null,
-		"openGraphImageUrl": "https://avatars3.githubusercontent.com/u/32291426?s=400&v=4",
+		"openGraphImageUrl": "https://avatars.githubusercontent.com/u/32291426?s=400&v=4",
 		"repositoryTopics": {
 			"nodes": []
 		}
@@ -79,7 +79,7 @@
 		},
 		"homepageUrl": null,
 		"description": null,
-		"openGraphImageUrl": "https://avatars3.githubusercontent.com/u/44667683?s=400&v=4",
+		"openGraphImageUrl": "https://avatars.githubusercontent.com/u/44667683?s=400&v=4",
 		"repositoryTopics": {
 			"nodes": []
 		}
@@ -171,7 +171,7 @@
 		},
 		"homepageUrl": "https://alphafofana.github.io/",
 		"description": null,
-		"openGraphImageUrl": "https://avatars3.githubusercontent.com/u/32291426?s=400&v=4",
+		"openGraphImageUrl": "https://avatars.githubusercontent.com/u/32291426?s=400&v=4",
 		"repositoryTopics": {
 			"nodes": []
 		}
@@ -212,7 +212,65 @@
 		},
 		"homepageUrl": null,
 		"description": null,
-		"openGraphImageUrl": "https://avatars3.githubusercontent.com/u/32291426?s=400&v=4",
+		"openGraphImageUrl": "https://avatars.githubusercontent.com/u/32291426?s=400&v=4",
+		"repositoryTopics": {
+			"nodes": []
+		}
+	},
+	{
+		"name": "developing-mobile-applications-project-ID2216",
+		"url": "https://github.com/Alphafofana/developing-mobile-applications-project-ID2216",
+		"languages": {
+			"language": [
+				{
+					"size": 38141,
+					"node": {
+						"name": "JavaScript"
+					}
+				}
+			]
+		},
+		"stargazers": {
+			"totalCount": 0
+		},
+		"owner": {
+			"login": "Alphafofana"
+		},
+		"forks": {
+			"totalCount": 0
+		},
+		"homepageUrl": null,
+		"description": null,
+		"openGraphImageUrl": "https://avatars.githubusercontent.com/u/32291426?s=400&v=4",
+		"repositoryTopics": {
+			"nodes": []
+		}
+	},
+	{
+		"name": "developing-mobile-applications-android-ID2216",
+		"url": "https://github.com/Alphafofana/developing-mobile-applications-android-ID2216",
+		"languages": {
+			"language": [
+				{
+					"size": 15399,
+					"node": {
+						"name": "Java"
+					}
+				}
+			]
+		},
+		"stargazers": {
+			"totalCount": 0
+		},
+		"owner": {
+			"login": "Alphafofana"
+		},
+		"forks": {
+			"totalCount": 0
+		},
+		"homepageUrl": null,
+		"description": null,
+		"openGraphImageUrl": "https://avatars.githubusercontent.com/u/32291426?s=400&v=4",
 		"repositoryTopics": {
 			"nodes": []
 		}
